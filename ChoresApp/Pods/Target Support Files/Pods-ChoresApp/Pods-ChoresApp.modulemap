@@ -1,0 +1,6 @@
+framework module Pods_ChoresApp {
+  umbrella header "Pods-ChoresApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

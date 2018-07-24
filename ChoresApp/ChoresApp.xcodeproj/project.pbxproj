@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14519DA4FDED3C6C0EA5125C /* Pods_ChoresApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23951E186E09D24D128BB521 /* Pods_ChoresApp.framework */; };
 		D1BFBC55210698E6007731C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC54210698E6007731C5 /* AppDelegate.swift */; };
 		D1BFBC57210698E6007731C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC56210698E6007731C5 /* ViewController.swift */; };
 		D1BFBC5A210698E6007731C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBC58210698E6007731C5 /* Main.storyboard */; };
@@ -15,9 +16,15 @@
 		D1BFBC62210698E9007731C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBC60210698E9007731C5 /* LaunchScreen.storyboard */; };
 		D1BFBC6C21078CCD007731C5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBC6B21078CCD007731C5 /* Login.storyboard */; };
 		D1BFBC6E21078F1E007731C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC6D21078F1E007731C5 /* LoginViewController.swift */; };
+		D1BFBC70210794DB007731C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBC6F210794DB007731C5 /* GoogleService-Info.plist */; };
+		D1BFBC732107A07C007731C5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC722107A07C007731C5 /* User.swift */; };
+		D1BFBC752107A48C007731C5 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC742107A48C007731C5 /* CreateUsernameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23951E186E09D24D128BB521 /* Pods_ChoresApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChoresApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5272B7F96DA8EEDE238D8705 /* Pods-ChoresApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoresApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoresApp/Pods-ChoresApp.release.xcconfig"; sourceTree = "<group>"; };
+		B5DBD84483320921153BD532 /* Pods-ChoresApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoresApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoresApp/Pods-ChoresApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D1BFBC51210698E6007731C5 /* ChoresApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoresApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BFBC54210698E6007731C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1BFBC56210698E6007731C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +35,9 @@
 		D1BFBC63210698E9007731C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1BFBC6B21078CCD007731C5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D1BFBC6D21078F1E007731C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D1BFBC6F210794DB007731C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D1BFBC722107A07C007731C5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D1BFBC742107A48C007731C5 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14519DA4FDED3C6C0EA5125C /* Pods_ChoresApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CF60535346EEEBDE875F2FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5DBD84483320921153BD532 /* Pods-ChoresApp.debug.xcconfig */,
+				5272B7F96DA8EEDE238D8705 /* Pods-ChoresApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B2188338E0A74440A8EAC624 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23951E186E09D24D128BB521 /* Pods_ChoresApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D1BFBC48210698E6007731C5 = {
 			isa = PBXGroup;
 			children = (
 				D1BFBC53210698E6007731C5 /* ChoresApp */,
 				D1BFBC52210698E6007731C5 /* Products */,
+				3CF60535346EEEBDE875F2FE /* Pods */,
+				B2188338E0A74440A8EAC624 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +90,13 @@
 		D1BFBC53210698E6007731C5 /* ChoresApp */ = {
 			isa = PBXGroup;
 			children = (
+				D1BFBC54210698E6007731C5 /* AppDelegate.swift */,
+				D1BFBC712107A069007731C5 /* Models */,
 				D1BFBC6A21069A31007731C5 /* Controllers */,
 				D1BFBC6921069A28007731C5 /* Storyboards */,
-				D1BFBC54210698E6007731C5 /* AppDelegate.swift */,
 				D1BFBC5E210698E9007731C5 /* Assets.xcassets */,
 				D1BFBC63210698E9007731C5 /* Info.plist */,
+				D1BFBC6F210794DB007731C5 /* GoogleService-Info.plist */,
 				D1BFBC5B210698E6007731C5 /* ChoresApp.xcdatamodeld */,
 			);
 			path = ChoresApp;
@@ -74,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				D1BFBC58210698E6007731C5 /* Main.storyboard */,
-				D1BFBC60210698E9007731C5 /* LaunchScreen.storyboard */,
 				D1BFBC6B21078CCD007731C5 /* Login.storyboard */,
+				D1BFBC60210698E9007731C5 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -85,8 +117,17 @@
 			children = (
 				D1BFBC56210698E6007731C5 /* ViewController.swift */,
 				D1BFBC6D21078F1E007731C5 /* LoginViewController.swift */,
+				D1BFBC742107A48C007731C5 /* CreateUsernameViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D1BFBC712107A069007731C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1BFBC722107A07C007731C5 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1BFBC66210698E9007731C5 /* Build configuration list for PBXNativeTarget "ChoresApp" */;
 			buildPhases = (
+				8E855E52695C2F956E3F974B /* [CP] Check Pods Manifest.lock */,
 				D1BFBC4D210698E6007731C5 /* Sources */,
 				D1BFBC4E210698E6007731C5 /* Frameworks */,
 				D1BFBC4F210698E6007731C5 /* Resources */,
+				FFB1F2FD1CD56A123EABC205 /* [CP] Embed Pods Frameworks */,
+				EE0B6AED5C6E8376F46A8009 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,12 +193,76 @@
 			files = (
 				D1BFBC6C21078CCD007731C5 /* Login.storyboard in Resources */,
 				D1BFBC62210698E9007731C5 /* LaunchScreen.storyboard in Resources */,
+				D1BFBC70210794DB007731C5 /* GoogleService-Info.plist in Resources */,
 				D1BFBC5F210698E9007731C5 /* Assets.xcassets in Resources */,
 				D1BFBC5A210698E6007731C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8E855E52695C2F956E3F974B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChoresApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE0B6AED5C6E8376F46A8009 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChoresApp/Pods-ChoresApp-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChoresApp/Pods-ChoresApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFB1F2FD1CD56A123EABC205 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChoresApp/Pods-ChoresApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChoresApp/Pods-ChoresApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1BFBC4D210698E6007731C5 /* Sources */ = {
@@ -163,7 +271,9 @@
 			files = (
 				D1BFBC6E21078F1E007731C5 /* LoginViewController.swift in Sources */,
 				D1BFBC57210698E6007731C5 /* ViewController.swift in Sources */,
+				D1BFBC752107A48C007731C5 /* CreateUsernameViewController.swift in Sources */,
 				D1BFBC55210698E6007731C5 /* AppDelegate.swift in Sources */,
+				D1BFBC732107A07C007731C5 /* User.swift in Sources */,
 				D1BFBC5D210698E6007731C5 /* ChoresApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +416,7 @@
 		};
 		D1BFBC67210698E9007731C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5DBD84483320921153BD532 /* Pods-ChoresApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -324,6 +435,7 @@
 		};
 		D1BFBC68210698E9007731C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5272B7F96DA8EEDE238D8705 /* Pods-ChoresApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
