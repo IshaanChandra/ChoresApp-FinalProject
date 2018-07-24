@@ -19,6 +19,7 @@
 		D1BFBC70210794DB007731C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBC6F210794DB007731C5 /* GoogleService-Info.plist */; };
 		D1BFBC732107A07C007731C5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC722107A07C007731C5 /* User.swift */; };
 		D1BFBC752107A48C007731C5 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC742107A48C007731C5 /* CreateUsernameViewController.swift */; };
+		D1BFBC782107BC4F007731C5 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC772107BC4F007731C5 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D1BFBC6F210794DB007731C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1BFBC722107A07C007731C5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D1BFBC742107A48C007731C5 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		D1BFBC772107BC4F007731C5 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				D1BFBC54210698E6007731C5 /* AppDelegate.swift */,
+				D1BFBC762107BC3C007731C5 /* Services */,
 				D1BFBC712107A069007731C5 /* Models */,
 				D1BFBC6A21069A31007731C5 /* Controllers */,
 				D1BFBC6921069A28007731C5 /* Storyboards */,
@@ -128,6 +131,14 @@
 				D1BFBC722107A07C007731C5 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D1BFBC762107BC3C007731C5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D1BFBC772107BC4F007731C5 /* UserService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1BFBC782107BC4F007731C5 /* UserService.swift in Sources */,
 				D1BFBC6E21078F1E007731C5 /* LoginViewController.swift in Sources */,
 				D1BFBC57210698E6007731C5 /* ViewController.swift in Sources */,
 				D1BFBC752107A48C007731C5 /* CreateUsernameViewController.swift in Sources */,

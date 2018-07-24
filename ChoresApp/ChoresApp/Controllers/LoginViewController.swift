@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        loginButton.layer.cornerRadius = 6
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,12 +53,20 @@ extension LoginViewController: FUIAuthDelegate {
         
         let userRef = Database.database().reference().child("users").child(user.uid)
         
-        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            if let user = User(snapshot: snapshot) {
-                print("Welcome back, \(user.username).")
+        UserService.show(forUID: user.uid) { (user) in
+            if let user = user {
+                // handle existing user
+                User.setCurrent(user)
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                if let initialViewController = storyboard.instantiateInitialViewController() {
+                    self.view.window?.rootViewController = initialViewController
+                    self.view.window?.makeKeyAndVisible()
+                }
             } else {
-                print("New user!")
+                // handle new user
+                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
             }
-        })
+        }
     }
 }
