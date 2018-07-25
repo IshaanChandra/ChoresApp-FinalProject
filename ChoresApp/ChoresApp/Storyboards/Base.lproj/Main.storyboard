@@ -6,14 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainPageViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ChoresApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainPageViewController" id="BYZ-38-t0r" customClass="MainPageViewController" customModule="ChoresApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,12 +24,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LYA-WT-1jW">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="LYA-WT-1jW">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Groups" id="8C7-6v-cwn">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zuw-aV-e5X"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zuw-aV-e5X">
+                                            <connections>
+                                                <segue destination="2q7-FX-Edl" kind="show" identifier="addGroup" id="PWp-KY-bfw"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -48,25 +56,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4pF-Cb-v1s">
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="4pF-Cb-v1s">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.011764705882352941" green="0.0" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Group Name" id="2aE-kl-kRG">
-                                        <barButtonItem key="rightBarButtonItem" title="Next" id="dLi-bj-Trp"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Next" id="dLi-bj-Trp">
+                                            <connections>
+                                                <segue destination="eU2-Mp-9Hz" kind="show" identifier="addChores" id="Zim-kN-hXq"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter group name here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27z-9s-Gdo">
-                                <rect key="frame" x="33" y="168" width="308" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter group name here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27z-9s-Gdo">
+                                <rect key="frame" x="33" y="147" width="308" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.011764705882352941" green="0.0" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4pF-Cb-v1s" firstAttribute="leading" secondItem="HQv-0i-iiy" secondAttribute="leading" id="Vza-VB-fa8"/>
+                            <constraint firstItem="27z-9s-Gdo" firstAttribute="centerX" secondItem="HQv-0i-iiy" secondAttribute="centerX" id="Y4O-QV-cO3"/>
+                            <constraint firstItem="27z-9s-Gdo" firstAttribute="centerX" secondItem="4pF-Cb-v1s" secondAttribute="centerX" id="aWf-q6-xnz"/>
+                            <constraint firstItem="27z-9s-Gdo" firstAttribute="top" secondItem="4pF-Cb-v1s" secondAttribute="bottom" constant="83" id="jR2-iP-9Vr"/>
+                            <constraint firstItem="8d9-eQ-qxA" firstAttribute="bottom" secondItem="27z-9s-Gdo" secondAttribute="bottom" constant="490" id="pIY-nH-usH"/>
+                            <constraint firstItem="27z-9s-Gdo" firstAttribute="leading" secondItem="8d9-eQ-qxA" secondAttribute="leading" constant="33" id="yGB-jN-yjN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8d9-eQ-qxA"/>
                     </view>
                 </viewController>
@@ -82,23 +104,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qv3-b8-PGB">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="Qv3-b8-PGB">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Chores" id="4sX-UR-iDL">
-                                        <barButtonItem key="rightBarButtonItem" title="Next" id="fus-n2-RBS"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Next" id="fus-n2-RBS">
+                                            <connections>
+                                                <segue destination="pax-fV-wZp" kind="show" identifier="addPeople" id="alJ-4g-ycN"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.011764705882352941" green="0.0" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2nm-z6-bGE"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fb7-oT-0mQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1642" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6Mu-2F-mkd">
+            <objects>
+                <viewController id="pax-fV-wZp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MgT-30-v4L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="EKu-4w-MEr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="People" id="lt6-Gk-4d9">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="2ld-ZI-VnL"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for friend's username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4k3-1t-bmG">
+                                <rect key="frame" x="16" y="92" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1fz-ce-ZZv">
+                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4k3-1t-bmG" firstAttribute="top" secondItem="MgT-30-v4L" secondAttribute="top" constant="92" id="0tD-Ye-Jgg"/>
+                            <constraint firstItem="1fz-ce-ZZv" firstAttribute="bottom" secondItem="u3p-FK-btS" secondAttribute="bottom" id="94D-EN-Z3a"/>
+                            <constraint firstItem="EKu-4w-MEr" firstAttribute="leading" secondItem="MgT-30-v4L" secondAttribute="leading" id="AZA-aX-8Ef"/>
+                            <constraint firstItem="4k3-1t-bmG" firstAttribute="leading" secondItem="MgT-30-v4L" secondAttribute="leadingMargin" id="AdN-VC-TCB"/>
+                            <constraint firstItem="4k3-1t-bmG" firstAttribute="centerX" secondItem="EKu-4w-MEr" secondAttribute="centerX" id="eyc-Bg-h6b"/>
+                            <constraint firstItem="4k3-1t-bmG" firstAttribute="top" secondItem="EKu-4w-MEr" secondAttribute="bottom" constant="28" id="kiN-bq-9oh"/>
+                            <constraint firstItem="4k3-1t-bmG" firstAttribute="centerX" secondItem="1fz-ce-ZZv" secondAttribute="centerX" id="mUN-r5-ag8"/>
+                            <constraint firstItem="1fz-ce-ZZv" firstAttribute="top" secondItem="4k3-1t-bmG" secondAttribute="bottom" constant="19" id="w8r-lH-afg"/>
+                            <constraint firstItem="4k3-1t-bmG" firstAttribute="trailing" secondItem="MgT-30-v4L" secondAttribute="trailingMargin" id="yvB-Yg-PIf"/>
+                            <constraint firstItem="EKu-4w-MEr" firstAttribute="leading" secondItem="1fz-ce-ZZv" secondAttribute="leading" id="zJZ-f8-dfq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u3p-FK-btS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTp-uV-so7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2408.8000000000002" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

@@ -20,6 +20,9 @@
 		D1BFBC732107A07C007731C5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC722107A07C007731C5 /* User.swift */; };
 		D1BFBC752107A48C007731C5 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC742107A48C007731C5 /* CreateUsernameViewController.swift */; };
 		D1BFBC782107BC4F007731C5 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC772107BC4F007731C5 /* UserService.swift */; };
+		D1BFBC7A2107E9A9007731C5 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC792107E9A9007731C5 /* MainPageViewController.swift */; };
+		D1BFBC7C2107F42B007731C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC7B2107F42B007731C5 /* Constants.swift */; };
+		D1BFBC7E2107F597007731C5 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC7D2107F597007731C5 /* Storyboard+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		D1BFBC722107A07C007731C5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D1BFBC742107A48C007731C5 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		D1BFBC772107BC4F007731C5 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		D1BFBC792107E9A9007731C5 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		D1BFBC7B2107F42B007731C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D1BFBC7D2107F597007731C5 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 				D1BFBC63210698E9007731C5 /* Info.plist */,
 				D1BFBC6F210794DB007731C5 /* GoogleService-Info.plist */,
 				D1BFBC5B210698E6007731C5 /* ChoresApp.xcdatamodeld */,
+				D1BFBC7B2107F42B007731C5 /* Constants.swift */,
+				D1BFBC7D2107F597007731C5 /* Storyboard+Utility.swift */,
 			);
 			path = ChoresApp;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 				D1BFBC56210698E6007731C5 /* ViewController.swift */,
 				D1BFBC6D21078F1E007731C5 /* LoginViewController.swift */,
 				D1BFBC742107A48C007731C5 /* CreateUsernameViewController.swift */,
+				D1BFBC792107E9A9007731C5 /* MainPageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1BFBC7A2107E9A9007731C5 /* MainPageViewController.swift in Sources */,
 				D1BFBC782107BC4F007731C5 /* UserService.swift in Sources */,
 				D1BFBC6E21078F1E007731C5 /* LoginViewController.swift in Sources */,
 				D1BFBC57210698E6007731C5 /* ViewController.swift in Sources */,
@@ -287,6 +297,8 @@
 				D1BFBC55210698E6007731C5 /* AppDelegate.swift in Sources */,
 				D1BFBC732107A07C007731C5 /* User.swift in Sources */,
 				D1BFBC5D210698E6007731C5 /* ChoresApp.xcdatamodeld in Sources */,
+				D1BFBC7C2107F42B007731C5 /* Constants.swift in Sources */,
+				D1BFBC7E2107F597007731C5 /* Storyboard+Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
