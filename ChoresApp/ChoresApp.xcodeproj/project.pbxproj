@@ -25,8 +25,8 @@
 		D1BFBC7E2107F597007731C5 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC7D2107F597007731C5 /* Storyboard+Utility.swift */; };
 		D1BFBC832108DEB6007731C5 /* AddGroupNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC822108DEB6007731C5 /* AddGroupNameViewController.swift */; };
 		D1BFBC852108E663007731C5 /* ChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC842108E663007731C5 /* ChoresViewController.swift */; };
-		D1BFBC892108EB43007731C5 /* InputChoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC882108EB43007731C5 /* InputChoresTableViewCell.swift */; };
 		D1BFBC8B2108F3E5007731C5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBC8A2108F3E4007731C5 /* Home.storyboard */; };
+		D1BFBC8E21090D8A007731C5 /* listChoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC8D21090D8A007731C5 /* listChoresTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +52,8 @@
 		D1BFBC7D2107F597007731C5 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		D1BFBC822108DEB6007731C5 /* AddGroupNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroupNameViewController.swift; sourceTree = "<group>"; };
 		D1BFBC842108E663007731C5 /* ChoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresViewController.swift; sourceTree = "<group>"; };
-		D1BFBC882108EB43007731C5 /* InputChoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputChoresTableViewCell.swift; sourceTree = "<group>"; };
 		D1BFBC8A2108F3E4007731C5 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		D1BFBC8D21090D8A007731C5 /* listChoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listChoresTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,10 +125,10 @@
 		D1BFBC6921069A28007731C5 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				D1BFBC8A2108F3E4007731C5 /* Home.storyboard */,
 				D1BFBC58210698E6007731C5 /* Main.storyboard */,
 				D1BFBC6B21078CCD007731C5 /* Login.storyboard */,
 				D1BFBC60210698E9007731C5 /* LaunchScreen.storyboard */,
-				D1BFBC8A2108F3E4007731C5 /* Home.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -142,7 +142,6 @@
 				D1BFBC792107E9A9007731C5 /* MainPageViewController.swift */,
 				D1BFBC822108DEB6007731C5 /* AddGroupNameViewController.swift */,
 				D1BFBC842108E663007731C5 /* ChoresViewController.swift */,
-				D1BFBC882108EB43007731C5 /* InputChoresTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -166,6 +165,7 @@
 		D1BFBC8C21090893007731C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D1BFBC8D21090D8A007731C5 /* listChoresTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,11 +313,11 @@
 				D1BFBC852108E663007731C5 /* ChoresViewController.swift in Sources */,
 				D1BFBC7A2107E9A9007731C5 /* MainPageViewController.swift in Sources */,
 				D1BFBC832108DEB6007731C5 /* AddGroupNameViewController.swift in Sources */,
+				D1BFBC8E21090D8A007731C5 /* listChoresTableViewCell.swift in Sources */,
 				D1BFBC782107BC4F007731C5 /* UserService.swift in Sources */,
 				D1BFBC6E21078F1E007731C5 /* LoginViewController.swift in Sources */,
 				D1BFBC57210698E6007731C5 /* ViewController.swift in Sources */,
 				D1BFBC752107A48C007731C5 /* CreateUsernameViewController.swift in Sources */,
-				D1BFBC892108EB43007731C5 /* InputChoresTableViewCell.swift in Sources */,
 				D1BFBC55210698E6007731C5 /* AppDelegate.swift in Sources */,
 				D1BFBC732107A07C007731C5 /* User.swift in Sources */,
 				D1BFBC5D210698E6007731C5 /* ChoresApp.xcdatamodeld in Sources */,

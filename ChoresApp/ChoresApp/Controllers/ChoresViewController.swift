@@ -18,6 +18,17 @@ class ChoresViewController: UITableViewController {
         
     }
     
+    //Number of rows in section
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+
+    //Assigns which cell goes to which row
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listChoresTableViewCell", for: indexPath) as! ListChoresTableViewCell
+
+        return cell
+    }
     
     
 }
