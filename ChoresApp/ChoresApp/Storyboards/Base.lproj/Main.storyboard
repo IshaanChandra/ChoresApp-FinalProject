@@ -127,7 +127,7 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listChoresTableViewCell" id="9tM-5o-5bl" customClass="ListChoresTableViewCell" customModule="ChoresApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListChoresTableViewCell" id="9tM-5o-5bl" customClass="ListChoresTableViewCell" customModule="ChoresApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9tM-5o-5bl" id="270-Sr-QfV">
@@ -141,9 +141,15 @@
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="textFieldEdited:" destination="9tM-5o-5bl" eventType="editingChanged" id="9yA-0l-xrC"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textField" destination="BJb-Ex-q2u" id="Q49-f2-gQJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
