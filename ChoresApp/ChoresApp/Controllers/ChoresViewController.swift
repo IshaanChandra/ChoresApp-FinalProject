@@ -46,7 +46,9 @@ class ChoresViewController: UITableViewController, ChoresCellDelegate {
         case "addPeople":
             let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             
-            
+            for choreInput in 0..<15 {
+               // chores.append()
+            }
             //chore.name = textField.text!
 //            for row in 0..<15 {
 //                print(row)

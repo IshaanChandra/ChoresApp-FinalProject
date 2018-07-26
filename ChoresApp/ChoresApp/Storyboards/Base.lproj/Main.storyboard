@@ -67,11 +67,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Group Name" id="2aE-kl-kRG">
-                                        <barButtonItem key="rightBarButtonItem" title="Next" id="dLi-bj-Trp">
-                                            <connections>
-                                                <segue destination="aJK-LH-mm8" kind="show" id="5zf-2e-BtB"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Next" id="dLi-bj-Trp"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -118,11 +114,7 @@
                             </textAttributes>
                             <items>
                                 <navigationItem title="Chores" id="HF8-8B-8W4">
-                                    <barButtonItem key="rightBarButtonItem" title="Next" id="fus-n2-RBS">
-                                        <connections>
-                                            <segue destination="pax-fV-wZp" kind="show" identifier="addPeople" id="alJ-4g-ycN"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" title="Next" id="fus-n2-RBS"/>
                                 </navigationItem>
                             </items>
                         </navigationBar>
@@ -160,7 +152,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZx-Pb-iPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1613.5999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1570" y="965"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6Mu-2F-mkd">
@@ -211,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTp-uV-so7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2408.8000000000002" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2337" y="965"/>
         </scene>
     </scenes>
 </document>
