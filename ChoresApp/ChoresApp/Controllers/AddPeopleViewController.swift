@@ -13,7 +13,10 @@ import UIKit
 
 class AddPeopleViewController: UIViewController {
     
+    var people: [String] = []
     
+    @IBOutlet weak var personTextField: UITextField!
+    @IBOutlet weak var savePersonButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +26,24 @@ class AddPeopleViewController: UIViewController {
         self.view.addGestureRecognizer(tap)
     }
     
+    @IBAction func saveButtonTapped(_ sender: Any) {
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
         case "savePerson":
-            print("save button item tapped")
+            if let text = personTextField.text {
+                if personTextField.text != "" {
+                    people.append(text)
+                } else {
+                    personTextField.text = ""
+                }
+            }
             
+            print(people)
         case "cancelPerson":
             print("cancel bar button item tapped")
             

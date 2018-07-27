@@ -127,6 +127,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveButtonTapped:" destination="kzr-LQ-82e" eventType="touchUpInside" id="1XV-0Y-dnW"/>
                                     <segue destination="081-ml-95w" kind="unwind" identifier="saveChore" unwindAction="unwindWithSegue:" id="edU-Jb-wr4"/>
                                 </connections>
                             </button>
@@ -145,11 +146,43 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VQ6-fE-nYh"/>
                     </view>
+                    <connections>
+                        <outlet property="choreTextField" destination="JU8-I1-17R" id="QyL-uS-K3j"/>
+                        <outlet property="saveChoreButton" destination="8HQ-O4-aIv" id="iBm-zg-BAM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYi-rF-PdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="081-ml-95w" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="681" y="-443"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="uYf-oe-edk">
+            <objects>
+                <tableViewController id="c2O-x4-4Kj" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="j1t-p4-9qk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GgJ-BY-wWo">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GgJ-BY-wWo" id="HdC-yK-lXY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c2O-x4-4Kj" id="1B1-7A-WaR"/>
+                            <outlet property="delegate" destination="c2O-x4-4Kj" id="ONE-R7-Y3w"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p9M-2e-GE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194" y="659"/>
         </scene>
         <!--Add People View Controller-->
         <scene sceneID="Xhy-j8-wxv">
@@ -173,6 +206,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveButtonTapped:" destination="2GY-8e-OLj" eventType="touchUpInside" id="IE2-fd-v8H"/>
                                     <segue destination="ocl-2g-DSD" kind="unwind" identifier="savePerson" unwindAction="unwindWithSegue:" id="7iW-ch-seA"/>
                                 </connections>
                             </button>
@@ -207,6 +241,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2tg-Oc-o7C"/>
                     </view>
+                    <connections>
+                        <outlet property="personTextField" destination="Mmp-1K-dpi" id="Gw1-0l-Chb"/>
+                        <outlet property="savePersonButton" destination="CtO-0s-o26" id="WX2-jb-bb2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCm-Pd-Izv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ocl-2g-DSD" userLabel="Exit" sceneMemberID="exit"/>
