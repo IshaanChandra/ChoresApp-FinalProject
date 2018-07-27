@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/IshaanChandra/Desktop/MakeSchool Projects/ChoresApp-FinalProject/ChoresApp/ChoresApp/Controllers/RandomizedListViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:ChoresApp.xcodeproj">
    </FileRef>
    <FileRef

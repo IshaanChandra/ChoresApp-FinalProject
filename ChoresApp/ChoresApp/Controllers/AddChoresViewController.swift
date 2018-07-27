@@ -14,11 +14,7 @@ import UIKit
 
 class AddChoresViewController: UIViewController {
 
-    var chore: [String] = [] {
-        didSet {
-            print("set \(chore)")
-        }
-    }
+    var chore: Chore?
     
     @IBOutlet weak var choreTextField: UITextField!
     @IBOutlet weak var saveChoreButton: UIButton!
@@ -32,6 +28,17 @@ class AddChoresViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 1
+        if let chore = chore {
+            choreTextField.text = chore.choreItem
+        } else {
+            choreTextField.text = ""
+        }
+    }
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
     }
     
@@ -42,20 +49,17 @@ class AddChoresViewController: UIViewController {
         
         
         switch identifier {
-        case "saveChore":
-//            if let text = choreTextField.text {
-//                if choreTextField.text != "" {
-//                    chore.append(text)
-//                } else {
-//                    choreTextField.text = ""
-//                }
-//            }
+        case "saveChore" where chore != nil:
             
-            if choreTextField.text != nil && choreTextField.text != "" {
-                let choreItem = choreTextField.text
-                self.chore.append(choreItem!)
-            }
-            print(self.chore)
+            chore?.choreItem = choreTextField.text ?? ""
+            
+            CoreDataHelper.saveChore()
+            
+        case "save" where chore == nil:
+            let chore = CoreDataHelper.newChore()
+            chore.choreItem = choreTextField.text ?? ""
+            
+            CoreDataHelper.saveChore()
         case "cancelChore":
             print("cancel bar button item tapped")
             

@@ -13,7 +13,7 @@ import UIKit
 
 class AddPeopleViewController: UIViewController {
     
-    var people: [String] = []
+    var people: Chore?
     
     @IBOutlet weak var personTextField: UITextField!
     @IBOutlet weak var savePersonButton: UIButton!
@@ -26,24 +26,34 @@ class AddPeopleViewController: UIViewController {
         self.view.addGestureRecognizer(tap)
     }
     
-    @IBAction func saveButtonTapped(_ sender: Any) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let people = people {
+            personTextField.text = people.person
+        } else {
+            personTextField.text = ""
+        }
     }
     
+    @IBAction func saveButtonTapped(_ sender: Any) {
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
-        case "savePerson":
-            if let text = personTextField.text {
-                if personTextField.text != "" {
-                    people.append(text)
-                } else {
-                    personTextField.text = ""
-                }
-            }
+        case "savePerson" where people != nil:
+            people?.person = personTextField.text ?? ""
             
-            print(people)
+            CoreDataHelper.savePerson()
+            
+        case "savePerson" where people == nil:
+            let people = CoreDataHelper.newPerson()
+            people.person = personTextField.text ?? ""
+            
+            CoreDataHelper.savePerson()
+        
         case "cancelPerson":
             print("cancel bar button item tapped")
             
