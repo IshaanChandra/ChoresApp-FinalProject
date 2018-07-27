@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-
+import FirebaseAuth
+import FirebaseDatabase
 
 
 class AddGroupNameViewController: UIViewController {
@@ -16,6 +17,7 @@ class AddGroupNameViewController: UIViewController {
     var groupName: String?
     
     @IBOutlet weak var groupNameTextField: UITextField!
+    @IBOutlet weak var saveGroupName: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,4 +34,20 @@ class AddGroupNameViewController: UIViewController {
             groupNameTextField.text = ""
         }
     }
+
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        
+//        let storyboard = UIStoryboard(name: "Home", bundle: .main)
+//        if let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomePageViewController") {
+//            self.view.window?.rootViewController = initialViewController
+//            self.view.window?.makeKeyAndVisible()
+//        }
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+//        if let initialViewController = storyboard.instantiateInitialViewController() {
+//            self.view.window?.rootViewController = initialViewController
+//            self.view.window?.makeKeyAndVisible()
+//        }
+    }
+    
 }
