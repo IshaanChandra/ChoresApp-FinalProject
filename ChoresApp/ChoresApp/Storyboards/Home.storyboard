@@ -29,6 +29,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="randomizeButtonTapped:" destination="XK3-j7-TcE" eventType="touchUpInside" id="BvQ-oU-wiz"/>
                                     <segue destination="c2O-x4-4Kj" kind="show" id="bIs-Lj-bb7"/>
                                 </connections>
                             </button>
@@ -53,6 +54,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="addChoresButtonTapped:" destination="XK3-j7-TcE" eventType="touchUpInside" id="WII-3g-2q9"/>
                                     <segue destination="kzr-LQ-82e" kind="show" identifier="addChores" id="GS2-Ku-9pk"/>
                                 </connections>
                             </button>
@@ -67,6 +69,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="addPeopleButtonTapped:" destination="XK3-j7-TcE" eventType="touchUpInside" id="hyc-Pd-gCm"/>
                                     <segue destination="2GY-8e-OLj" kind="show" identifier="addPeople" id="5uR-Ry-ZAZ"/>
                                 </connections>
                             </button>
@@ -88,6 +91,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6HI-z2-mXo"/>
                     </view>
+                    <connections>
+                        <outlet property="addChoresButton" destination="p3g-np-awq" id="UdZ-hO-H5C"/>
+                        <outlet property="addPeopleButton" destination="Abw-Md-5S6" id="kLi-ZL-3WF"/>
+                        <outlet property="randomizeButton" destination="tbF-Fq-pj7" id="x5Z-Xx-9LZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygn-Ic-Yyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,7 +176,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GgJ-BY-wWo" customClass="RandomizedListTableViewCell" customModule="ChoresApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RandomizedListTableViewCell" id="GgJ-BY-wWo" customClass="RandomizedListTableViewCell" customModule="ChoresApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GgJ-BY-wWo" id="HdC-yK-lXY">
@@ -183,7 +191,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMO-HM-eg7">
-                                            <rect key="frame" x="85" y="12" width="97" height="21"/>
+                                            <rect key="frame" x="165" y="12" width="97" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -191,6 +199,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="choresGivenLabel" destination="SMO-HM-eg7" id="uTz-4Q-8E9"/>
+                                    <outlet property="personNameLabel" destination="aOH-1j-LVD" id="OVF-bs-x0B"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -31,8 +31,8 @@
 		D1BFBC92210B8257007731C5 /* AddChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC91210B8257007731C5 /* AddChoresViewController.swift */; };
 		D1BFBC94210B82E2007731C5 /* AddPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC93210B82E2007731C5 /* AddPeopleViewController.swift */; };
 		D1BFBC97210BB7CC007731C5 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC96210BB7CC007731C5 /* CoreDataHelper.swift */; };
-		D1BFBC9B210BCC2B007731C5 /* RandomizedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC9A210BCC2B007731C5 /* RandomizedListViewController.swift */; };
 		D1BFBC9D210BCD59007731C5 /* RandomizedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC9C210BCD59007731C5 /* RandomizedListTableViewCell.swift */; };
+		D1BFBC9F210BD404007731C5 /* RandomizedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC9E210BD404007731C5 /* RandomizedListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,8 +64,8 @@
 		D1BFBC91210B8257007731C5 /* AddChoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChoresViewController.swift; sourceTree = "<group>"; };
 		D1BFBC93210B82E2007731C5 /* AddPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPeopleViewController.swift; sourceTree = "<group>"; };
 		D1BFBC96210BB7CC007731C5 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		D1BFBC9A210BCC2B007731C5 /* RandomizedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RandomizedListViewController.swift; path = "/Users/IshaanChandra/Desktop/MakeSchool Projects/ChoresApp-FinalProject/ChoresApp/ChoresApp/Controllers/RandomizedListViewController.swift"; sourceTree = "<absolute>"; };
 		D1BFBC9C210BCD59007731C5 /* RandomizedListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizedListTableViewCell.swift; sourceTree = "<group>"; };
+		D1BFBC9E210BD404007731C5 /* RandomizedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizedListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +158,7 @@
 				D1BFBC8F210A9B7F007731C5 /* HomePageViewController.swift */,
 				D1BFBC91210B8257007731C5 /* AddChoresViewController.swift */,
 				D1BFBC93210B82E2007731C5 /* AddPeopleViewController.swift */,
-				D1BFBC9A210BCC2B007731C5 /* RandomizedListViewController.swift */,
+				D1BFBC9E210BD404007731C5 /* RandomizedListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -339,7 +339,6 @@
 				D1BFBC852108E663007731C5 /* ChoresViewController.swift in Sources */,
 				D1BFBC7A2107E9A9007731C5 /* MainPageViewController.swift in Sources */,
 				D1BFBC832108DEB6007731C5 /* AddGroupNameViewController.swift in Sources */,
-				D1BFBC9B210BCC2B007731C5 /* RandomizedListViewController.swift in Sources */,
 				D1BFBC8E21090D8A007731C5 /* listChoresTableViewCell.swift in Sources */,
 				D1BFBC97210BB7CC007731C5 /* CoreDataHelper.swift in Sources */,
 				D1BFBC782107BC4F007731C5 /* UserService.swift in Sources */,
@@ -354,6 +353,7 @@
 				D1BFBC732107A07C007731C5 /* User.swift in Sources */,
 				D1BFBC5D210698E6007731C5 /* ChoresApp.xcdatamodeld in Sources */,
 				D1BFBC7C2107F42B007731C5 /* Constants.swift in Sources */,
+				D1BFBC9F210BD404007731C5 /* RandomizedListViewController.swift in Sources */,
 				D1BFBC7E2107F597007731C5 /* Storyboard+Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -46,8 +46,6 @@ class AddChoresViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
        
-        
-        
         switch identifier {
         case "saveChore" where chore != nil:
             

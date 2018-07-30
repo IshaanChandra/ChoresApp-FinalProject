@@ -11,6 +11,10 @@ import UIKit
 
 class HomePageViewController: UIViewController {
     
+    @IBOutlet weak var addChoresButton: UIButton!
+    @IBOutlet weak var addPeopleButton: UIButton!
+    @IBOutlet weak var randomizeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,4 +22,15 @@ class HomePageViewController: UIViewController {
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
         
     }
+    
+    @IBAction func addChoresButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func addPeopleButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func randomizeButtonTapped(_ sender: Any) {
+    }
+    
+    
 }
