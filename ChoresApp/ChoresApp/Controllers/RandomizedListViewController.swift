@@ -29,6 +29,9 @@ class RandomizedListViewController: UITableViewController {
         self.tableView.isEditing = false
         chores = CoreDataHelper.retrieveChores()
         people = CoreDataHelper.retrievePerson()
+        chores = shuffleArray(items: chores) as! [Chore]
+        people = shuffleArray(items: people) as! [People]
+
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,23 +40,7 @@ class RandomizedListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RandomizedListTableViewCell", for: indexPath) as! RandomizedListTableViewCell
-        //testing this
-//        var choresArray  = [Chore]()
-//        var peopleArray = [People]()
-        
-//        var fetchRequestChores = NSFetchRequest<NSFetchRequestResult>(entityName: "Chore")
-//        var fetchRequestPeople = NSFetchRequest<NSFetchRequestResult>(entityName: "People")
-//        choresArray = context.executeFetchRequest(fetchRequestChores, error: nil) as [Chore]
-//        peopleArray = context.executeFetchRequest(fetchRequestPeople, error: nil) as [People]
-//
-//        // Then you can use your properties.
-//
-//        for chores in choresArray {
-//
-//            print(chores.name)
-//
-//        }
-//
+
         let chore = chores[indexPath.row]
         let person = people[indexPath.row]
         cell.personNameLabel.text = person.person! + ": " + chore.choreItem!
@@ -61,5 +48,24 @@ class RandomizedListViewController: UITableViewController {
         return cell
     }
     
+    func shuffleArray(items: [Any]) -> [Any] {
+        var items = items
+        var last = items.count - 1
+        
+        while(last > 0)
+        {
+            let rand = Int(arc4random_uniform(UInt32(last)))
+            
+            print("swap items[\(last)] = \(items[last]) with items[\(rand)] = \(items[rand])")
+            
+            items.swapAt(last, rand)
+            
+            print(items)
+            
+            last -= 1
+        }
+        
+        return items
+    }
 }
 
