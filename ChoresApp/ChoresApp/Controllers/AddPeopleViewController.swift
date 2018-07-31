@@ -13,7 +13,7 @@ import UIKit
 
 class AddPeopleViewController: UIViewController {
     
-    var people: Chore?
+    var people: People?
     
     @IBOutlet weak var personTextField: UITextField!
     @IBOutlet weak var savePersonButton: UIButton!
@@ -24,6 +24,8 @@ class AddPeopleViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
+        
+        savePersonButton.layer.cornerRadius = 6
     }
     
     override func viewWillAppear(_ animated: Bool) {

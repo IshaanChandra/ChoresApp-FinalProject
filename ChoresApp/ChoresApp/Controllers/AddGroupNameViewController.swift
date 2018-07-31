@@ -21,7 +21,7 @@ class AddGroupNameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        saveGroupName.layer.cornerRadius = 6
     }
     
     override func viewWillAppear(_ animated: Bool) {

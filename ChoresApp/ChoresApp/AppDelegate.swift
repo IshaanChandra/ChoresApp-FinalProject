@@ -92,6 +92,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+//    func addToPerson() {
+//        let context = persistentContainer.viewContext
+//        
+//        let person = People(context: context)
+//        person.person = "testPerson"
+//        
+//        let chore1 = People(context: context)
+//        chores.choreItem = "testChore1"
+//        chores.addToPerson(chore1)
+//        
+//        let chore2 = People(context: context)
+//        chores.choreItem = "testChore2"
+//        chores.addToFriends(chore2)
+//        
+//        saveContext()
+//    }
 }
 
 extension AppDelegate {

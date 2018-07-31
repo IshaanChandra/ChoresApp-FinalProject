@@ -17,10 +17,13 @@ class HomePageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addChoresButton.layer.cornerRadius = 6
+        addPeopleButton.layer.cornerRadius = 6
+        randomizeButton.layer.cornerRadius = 6
     }
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
-        
     }
     
     @IBAction func addChoresButtonTapped(_ sender: Any) {
@@ -31,6 +34,7 @@ class HomePageViewController: UIViewController {
     
     @IBAction func randomizeButtonTapped(_ sender: Any) {
     }
+    
     
     
 }

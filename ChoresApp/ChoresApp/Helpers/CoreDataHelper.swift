@@ -44,21 +44,44 @@ struct CoreDataHelper {
     }
     
     static func retrieveChores() -> [Chore] {
+        
+        var choresArray  = [Chore]()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Chore")
+        
+        
         do {
-            let fetchRequest = NSFetchRequest<Chore>(entityName: "Chore")
             let results = try context.fetch(fetchRequest)
+            let chores = results as! [Chore]
             
-            return results
-        } catch let error {
-            print("Could not fetch \(error.localizedDescription)")
+            for _chores in chores {
+                print(_chores.choreItem!)
+                choresArray.append(_chores)
+            }
             
+            return choresArray
+        }catch let err as NSError {
+            print(err.debugDescription)
             return []
         }
+        
+        
+        
+//        do {
+//            let fetchRequest = NSFetchRequest<Chore>(entityName: "Chore")
+//            let results = try context.fetch(fetchRequest)
+//
+//            return results
+//        } catch let error {
+//            print("Could not fetch \(error.localizedDescription)")
+//
+//            return []
+//        }
     }
     
     //People
-    static func newPerson() -> Chore {
-        let person = NSEntityDescription.insertNewObject(forEntityName: "Chore", into: context) as! Chore
+    static func newPerson() -> People {
+        let person = NSEntityDescription.insertNewObject(forEntityName: "People", into: context) as! People
         
         return person
     }
@@ -71,23 +94,45 @@ struct CoreDataHelper {
         }
     }
     
-    static func delete(person: Chore) {
+    static func delete(person: People) {
         context.delete(person)
         
         savePerson()
     }
     
-    static func retrievePerson() -> [Chore] {
+    static func retrievePerson() -> [People] {
+        var peopleArray  = [People]()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "People")
+        
+        
         do {
-            let fetchRequest = NSFetchRequest<Chore>(entityName: "Chore")
             let results = try context.fetch(fetchRequest)
+            let persons = results as! [People]
             
-            return results
-        } catch let error {
-            print("Could not fetch \(error.localizedDescription)")
+            for _persons in persons {
+                print(_persons.person!)
+                peopleArray.append(_persons)
+            }
             
+            return peopleArray
+        }catch let err as NSError {
+            print(err.debugDescription)
             return []
         }
+       
+        
+        
+//        do {
+//            let fetchRequest = NSFetchRequest<People>(entityName: "People")
+//            let results = try context.fetch(fetchRequest)
+//
+//            return results
+//        } catch let error {
+//            print("Could not fetch \(error.localizedDescription)")
+//
+//            return []
+//        }
     }
 }
 

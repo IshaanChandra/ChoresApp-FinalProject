@@ -26,6 +26,7 @@ class AddChoresViewController: UIViewController {
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
         
+        saveChoreButton.layer.cornerRadius = 6
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +54,7 @@ class AddChoresViewController: UIViewController {
             
             CoreDataHelper.saveChore()
             
-        case "save" where chore == nil:
+        case "saveChore" where chore == nil:
             let chore = CoreDataHelper.newChore()
             chore.choreItem = choreTextField.text ?? ""
             

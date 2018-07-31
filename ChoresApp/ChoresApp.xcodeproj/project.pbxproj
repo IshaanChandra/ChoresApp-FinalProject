@@ -33,6 +33,10 @@
 		D1BFBC97210BB7CC007731C5 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC96210BB7CC007731C5 /* CoreDataHelper.swift */; };
 		D1BFBC9D210BCD59007731C5 /* RandomizedListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC9C210BCD59007731C5 /* RandomizedListTableViewCell.swift */; };
 		D1BFBC9F210BD404007731C5 /* RandomizedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC9E210BD404007731C5 /* RandomizedListViewController.swift */; };
+		D1BFBCAE210F8C31007731C5 /* People+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCAA210F8C31007731C5 /* People+CoreDataClass.swift */; };
+		D1BFBCAF210F8C31007731C5 /* People+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCAB210F8C31007731C5 /* People+CoreDataProperties.swift */; };
+		D1BFBCB0210F8C31007731C5 /* Chore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCAC210F8C31007731C5 /* Chore+CoreDataClass.swift */; };
+		D1BFBCB1210F8C31007731C5 /* Chore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCAD210F8C31007731C5 /* Chore+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		D1BFBC96210BB7CC007731C5 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		D1BFBC9C210BCD59007731C5 /* RandomizedListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizedListTableViewCell.swift; sourceTree = "<group>"; };
 		D1BFBC9E210BD404007731C5 /* RandomizedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizedListViewController.swift; sourceTree = "<group>"; };
+		D1BFBCAA210F8C31007731C5 /* People+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "People+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D1BFBCAB210F8C31007731C5 /* People+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "People+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D1BFBCAC210F8C31007731C5 /* Chore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chore+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D1BFBCAD210F8C31007731C5 /* Chore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chore+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				D1BFBC54210698E6007731C5 /* AppDelegate.swift */,
+				D1BFBCA9210F8C0B007731C5 /* CoreDataHelpers */,
 				D1BFBC95210BB7B7007731C5 /* Helpers */,
 				D1BFBC8C21090893007731C5 /* Views */,
 				D1BFBC762107BC3C007731C5 /* Services */,
@@ -194,6 +203,17 @@
 				D1BFBC96210BB7CC007731C5 /* CoreDataHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D1BFBCA9210F8C0B007731C5 /* CoreDataHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				D1BFBCAA210F8C31007731C5 /* People+CoreDataClass.swift */,
+				D1BFBCAB210F8C31007731C5 /* People+CoreDataProperties.swift */,
+				D1BFBCAC210F8C31007731C5 /* Chore+CoreDataClass.swift */,
+				D1BFBCAD210F8C31007731C5 /* Chore+CoreDataProperties.swift */,
+			);
+			path = CoreDataHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,7 +357,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1BFBC852108E663007731C5 /* ChoresViewController.swift in Sources */,
+				D1BFBCAF210F8C31007731C5 /* People+CoreDataProperties.swift in Sources */,
 				D1BFBC7A2107E9A9007731C5 /* MainPageViewController.swift in Sources */,
+				D1BFBCB0210F8C31007731C5 /* Chore+CoreDataClass.swift in Sources */,
+				D1BFBCAE210F8C31007731C5 /* People+CoreDataClass.swift in Sources */,
 				D1BFBC832108DEB6007731C5 /* AddGroupNameViewController.swift in Sources */,
 				D1BFBC8E21090D8A007731C5 /* listChoresTableViewCell.swift in Sources */,
 				D1BFBC97210BB7CC007731C5 /* CoreDataHelper.swift in Sources */,
@@ -346,6 +369,7 @@
 				D1BFBC6E21078F1E007731C5 /* LoginViewController.swift in Sources */,
 				D1BFBC57210698E6007731C5 /* ViewController.swift in Sources */,
 				D1BFBC752107A48C007731C5 /* CreateUsernameViewController.swift in Sources */,
+				D1BFBCB1210F8C31007731C5 /* Chore+CoreDataProperties.swift in Sources */,
 				D1BFBC9D210BCD59007731C5 /* RandomizedListTableViewCell.swift in Sources */,
 				D1BFBC90210A9B7F007731C5 /* HomePageViewController.swift in Sources */,
 				D1BFBC55210698E6007731C5 /* AppDelegate.swift in Sources */,

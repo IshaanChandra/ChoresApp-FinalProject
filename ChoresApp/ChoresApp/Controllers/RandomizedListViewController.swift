@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class RandomizedListViewController: UITableViewController {
     
@@ -17,7 +18,7 @@ class RandomizedListViewController: UITableViewController {
         }
     }
     
-    var people = [Chore]() {
+    var people = [People]() {
         didSet {
             tableView.reloadData()
         }
@@ -36,11 +37,27 @@ class RandomizedListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RandomizedListTableViewCell", for: indexPath) as! RandomizedListTableViewCell
+        //testing this
+//        var choresArray  = [Chore]()
+//        var peopleArray = [People]()
         
+//        var fetchRequestChores = NSFetchRequest<NSFetchRequestResult>(entityName: "Chore")
+//        var fetchRequestPeople = NSFetchRequest<NSFetchRequestResult>(entityName: "People")
+//        choresArray = context.executeFetchRequest(fetchRequestChores, error: nil) as [Chore]
+//        peopleArray = context.executeFetchRequest(fetchRequestPeople, error: nil) as [People]
+//
+//        // Then you can use your properties.
+//
+//        for chores in choresArray {
+//
+//            print(chores.name)
+//
+//        }
+//
         let chore = chores[indexPath.row]
         let person = people[indexPath.row]
-        cell.personNameLabel.text = person.person
-        cell.choresGivenLabel.text = chore.choreItem
+        cell.personNameLabel.text = person.person! + ": " + chore.choreItem!
+        //cell.choresGivenLabel.text = chore.choreItem
         return cell
     }
     
