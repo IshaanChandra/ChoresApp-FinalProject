@@ -8,19 +8,32 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class HomePageViewController: UIViewController {
+    
+    var groups = [Group]()
     
     @IBOutlet weak var addChoresButton: UIButton!
     @IBOutlet weak var addPeopleButton: UIButton!
     @IBOutlet weak var randomizeButton: UIButton!
+    @IBOutlet weak var navTitle: UINavigationItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        groups = CoreDataHelper.retrieveGroup()
+        
         addChoresButton.layer.cornerRadius = 6
         addPeopleButton.layer.cornerRadius = 6
         randomizeButton.layer.cornerRadius = 6
+        
+        var index = 1
+        
+        let group = groups[index-1]
+
+        self.navTitle.title =  group.groupsName
     }
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {

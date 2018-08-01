@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LeL-kd-Do9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -32,13 +32,7 @@
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Groups" id="8C7-6v-cwn">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zuw-aV-e5X">
-                                            <connections>
-                                                <segue destination="2q7-FX-Edl" kind="show" identifier="addGroup" id="PWp-KY-bfw"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Groups" id="8C7-6v-cwn"/>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -47,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+            <point key="canvasLocation" x="84" y="887"/>
         </scene>
         <!--Add Group Name View Controller-->
         <scene sceneID="v3m-F9-kqo">
@@ -57,10 +51,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG2_8757" translatesAutoresizingMaskIntoConstraints="NO" id="oYQ-0o-r2o">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter group name here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="27z-9s-Gdo">
                                 <rect key="frame" x="50" y="246" width="275" height="30"/>
                                 <nil key="textColor"/>
@@ -76,7 +66,7 @@
                                 </state>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="2q7-FX-Edl" eventType="touchUpInside" id="6kG-Uf-ipJ"/>
-                                    <segue destination="OIS-5c-dQc" kind="show" id="YGI-Dk-CqL"/>
+                                    <segue destination="OIS-5c-dQc" kind="show" identifier="savedGroupName" id="YGI-Dk-CqL"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pF-Cb-v1s">
@@ -92,7 +82,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.011764705882352941" green="0.0" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="d0i-Th-wPJ" firstAttribute="top" secondItem="27z-9s-Gdo" secondAttribute="bottom" constant="41" id="727-8N-Yga"/>
                             <constraint firstItem="27z-9s-Gdo" firstAttribute="leading" secondItem="8d9-eQ-qxA" secondAttribute="leading" constant="50" id="NuF-N2-d2t"/>
@@ -115,6 +105,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ib5-eB-Sly" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="877.60000000000002" y="133.5832083958021"/>
+        </scene>
+        <!--Main Page View Controller-->
+        <scene sceneID="TkP-DZ-MjL">
+            <objects>
+                <tableViewController id="LeL-kd-Do9" customClass="MainPageViewController" customModule="ChoresApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ft6-Nl-aoQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" barStyle="black" translucent="NO" id="V3P-OH-sHj">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                            </textAttributes>
+                            <items>
+                                <navigationItem title="Groups" id="oBZ-ga-VBB">
+                                    <barButtonItem key="rightBarButtonItem" systemItem="add" id="zuw-aV-e5X">
+                                        <connections>
+                                            <segue destination="2q7-FX-Edl" kind="show" identifier="addGroup" id="PWp-KY-bfw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gt0-OY-vKg" customClass="MainPageTableViewCell" customModule="ChoresApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gt0-OY-vKg" id="Nxx-DB-cVI">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njp-r2-VRq">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LeL-kd-Do9" id="W4e-Ig-2yM"/>
+                            <outlet property="delegate" destination="LeL-kd-Do9" id="cSi-Y6-Vl0"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVF-2L-E2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="133.5832083958021"/>
         </scene>
         <!--Home-->
         <scene sceneID="9ok-m3-FLv">
@@ -233,7 +277,4 @@
             <point key="canvasLocation" x="2337" y="965"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="IMG2_8757" width="1363" height="1365"/>
-    </resources>
 </document>

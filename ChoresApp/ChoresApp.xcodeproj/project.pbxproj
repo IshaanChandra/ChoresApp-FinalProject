@@ -36,6 +36,7 @@
 		D1BFBCAF210F8C31007731C5 /* People+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCAB210F8C31007731C5 /* People+CoreDataProperties.swift */; };
 		D1BFBCB0210F8C31007731C5 /* Chore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCAC210F8C31007731C5 /* Chore+CoreDataClass.swift */; };
 		D1BFBCB1210F8C31007731C5 /* Chore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCAD210F8C31007731C5 /* Chore+CoreDataProperties.swift */; };
+		D1BFBCB621123847007731C5 /* MainPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCB521123847007731C5 /* MainPageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		D1BFBCAC210F8C31007731C5 /* Chore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chore+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D1BFBCAD210F8C31007731C5 /* Chore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chore+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D1BFBCB421117C95007731C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1BFBCB521123847007731C5 /* MainPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			children = (
 				D1BFBC8D21090D8A007731C5 /* listChoresTableViewCell.swift */,
 				D1BFBC9C210BCD59007731C5 /* RandomizedListTableViewCell.swift */,
+				D1BFBCB521123847007731C5 /* MainPageTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				D1BFBC782107BC4F007731C5 /* UserService.swift in Sources */,
 				D1BFBC94210B82E2007731C5 /* AddPeopleViewController.swift in Sources */,
 				D1BFBC6E21078F1E007731C5 /* LoginViewController.swift in Sources */,
+				D1BFBCB621123847007731C5 /* MainPageTableViewCell.swift in Sources */,
 				D1BFBC57210698E6007731C5 /* ViewController.swift in Sources */,
 				D1BFBC752107A48C007731C5 /* CreateUsernameViewController.swift in Sources */,
 				D1BFBCB1210F8C31007731C5 /* Chore+CoreDataProperties.swift in Sources */,

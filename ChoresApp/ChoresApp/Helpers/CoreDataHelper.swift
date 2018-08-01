@@ -134,5 +134,41 @@ struct CoreDataHelper {
 //            return []
 //        }
     }
+    
+    
+    // Group
+    static func newGroup() -> Group {
+        let group = NSEntityDescription.insertNewObject(forEntityName: "Group", into: context) as! Group
+        
+        return group
+    }
+    
+    static func saveGroup() {
+        do {
+            try context.save()
+        } catch let error {
+            print("Could not save \(error.localizedDescription)")
+        }
+    }
+    
+    static func delete(group: Group) {
+        context.delete(group)
+        
+        saveGroup()
+    }
+    
+    static func retrieveGroup() -> [Group] {
+        
+        do {
+            let fetchRequest = NSFetchRequest<Group>(entityName: "Group")
+            let results = try context.fetch(fetchRequest)
+            
+            return results
+        } catch let error {
+            print("Could not fetch \(error.localizedDescription)")
+            
+            return []
+        }
+    }
 }
 

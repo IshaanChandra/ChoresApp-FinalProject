@@ -8,13 +8,11 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth
-import FirebaseDatabase
-
+import CoreData
 
 class AddGroupNameViewController: UIViewController {
     
-    var groupName: String?
+    var groupName: Group?
     
     @IBOutlet weak var groupNameTextField: UITextField!
     @IBOutlet weak var saveGroupName: UIButton!
@@ -28,8 +26,7 @@ class AddGroupNameViewController: UIViewController {
         super.viewWillAppear(animated)
         
         if let groupName = groupName {
-            groupNameTextField.text = groupName
-            
+            groupNameTextField.text = groupName.groupsName
         } else {
             groupNameTextField.text = ""
         }
@@ -37,17 +34,27 @@ class AddGroupNameViewController: UIViewController {
 
     @IBAction func saveButtonTapped(_ sender: Any) {
         
-//        let storyboard = UIStoryboard(name: "Home", bundle: .main)
-//        if let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomePageViewController") {
-//            self.view.window?.rootViewController = initialViewController
-//            self.view.window?.makeKeyAndVisible()
-//        }
-        
-//        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-//        if let initialViewController = storyboard.instantiateInitialViewController() {
-//            self.view.window?.rootViewController = initialViewController
-//            self.view.window?.makeKeyAndVisible()
-//        }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        
+        switch identifier {
+        case "savedGroupName" where groupName != nil:
+            groupName?.groupsName = groupNameTextField.text ?? ""
+            
+            CoreDataHelper.saveGroup()
+            
+        case "savedGroupName" where groupName == nil:
+            let groupName = CoreDataHelper.newGroup()
+            groupName.groupsName = groupNameTextField.text ?? ""
+            
+            CoreDataHelper.saveGroup()
+            
+        default:
+            print("unexpected segue identifier")
+        }
+    }
+    
     
 }
