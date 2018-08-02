@@ -12,5 +12,6 @@ import UIKit
  class MainPageTableViewCell: UITableViewCell {
     
     
+    @IBOutlet weak var groupNameLabel: UILabel!
     
  }

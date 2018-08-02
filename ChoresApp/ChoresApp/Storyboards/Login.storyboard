@@ -31,7 +31,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c74-og-POU">
                                 <rect key="frame" x="17" y="519" width="343" height="47"/>
-                                <color key="backgroundColor" red="0.30138987931020733" green="0.73540466324434783" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="A1r-of-rXR"/>
                                 </constraints>
@@ -164,7 +164,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVj-6x-0M2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="612" y="133.5832083958021"/>
+            <point key="canvasLocation" x="753" y="134"/>
         </scene>
     </scenes>
     <resources>

@@ -29,11 +29,10 @@ class HomePageViewController: UIViewController {
         addPeopleButton.layer.cornerRadius = 6
         randomizeButton.layer.cornerRadius = 6
         
-        var index = 1
-        
-        let group = groups[index-1]
+        let group = groups.last
 
-        self.navTitle.title =  group.groupsName
+        self.navTitle.title =  group?.groupsName
+    
     }
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
@@ -47,7 +46,6 @@ class HomePageViewController: UIViewController {
     
     @IBAction func randomizeButtonTapped(_ sender: Any) {
     }
-    
-    
+
     
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XK3-j7-TcE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UTz-dI-9zC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Group Name-->
+        <!--Title-->
         <scene sceneID="y6r-Tx-25g">
             <objects>
                 <viewController id="XK3-j7-TcE" customClass="HomePageViewController" customModule="ChoresApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,33 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbF-Fq-pj7">
-                                <rect key="frame" x="77" y="550" width="221" height="53"/>
-                                <color key="backgroundColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="ngL-cJ-K7D"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="Randomize">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="randomizeButtonTapped:" destination="XK3-j7-TcE" eventType="touchUpInside" id="BvQ-oU-wiz"/>
-                                    <segue destination="c2O-x4-4Kj" kind="show" id="bIs-Lj-bb7"/>
-                                </connections>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eS-rT-Y0g">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Group Name" id="6Eo-Oo-kol"/>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-np-awq">
-                                <rect key="frame" x="110" y="112" width="155" height="35"/>
+                                <rect key="frame" x="109" y="164" width="146" height="35"/>
                                 <color key="backgroundColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="qEg-OT-ATD"/>
@@ -59,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abw-Md-5S6">
-                                <rect key="frame" x="110" y="189" width="155" height="35"/>
+                                <rect key="frame" x="109" y="230" width="146" height="35"/>
                                 <color key="backgroundColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Ijj-la-2Vn"/>
@@ -73,37 +48,63 @@
                                     <segue destination="2GY-8e-OLj" kind="show" identifier="addPeople" id="5uR-Ry-ZAZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbF-Fq-pj7">
+                                <rect key="frame" x="80" y="536" width="204" height="68"/>
+                                <color key="backgroundColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="ngL-cJ-K7D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Randomize">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomizeButtonTapped:" destination="XK3-j7-TcE" eventType="touchUpInside" id="BvQ-oU-wiz"/>
+                                    <segue destination="c2O-x4-4Kj" kind="show" id="bIs-Lj-bb7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Abw-Md-5S6" firstAttribute="centerX" secondItem="tbF-Fq-pj7" secondAttribute="centerX" id="3s8-EN-If2"/>
-                            <constraint firstItem="1eS-rT-Y0g" firstAttribute="top" secondItem="6HI-z2-mXo" secondAttribute="top" id="95L-DH-iKo"/>
-                            <constraint firstItem="Abw-Md-5S6" firstAttribute="top" secondItem="p3g-np-awq" secondAttribute="bottom" constant="42" id="Boj-mD-nTH"/>
-                            <constraint firstAttribute="trailing" secondItem="1eS-rT-Y0g" secondAttribute="trailing" id="M0z-Aq-2dP"/>
-                            <constraint firstItem="p3g-np-awq" firstAttribute="leading" secondItem="6HI-z2-mXo" secondAttribute="leading" constant="110" id="WeG-UF-6ab"/>
-                            <constraint firstItem="6HI-z2-mXo" firstAttribute="bottom" secondItem="tbF-Fq-pj7" secondAttribute="bottom" constant="64" id="Y2l-j0-8H1"/>
+                            <constraint firstItem="Abw-Md-5S6" firstAttribute="top" secondItem="p3g-np-awq" secondAttribute="bottom" constant="31" id="Boj-mD-nTH"/>
+                            <constraint firstItem="p3g-np-awq" firstAttribute="top" secondItem="6HI-z2-mXo" secondAttribute="top" constant="100" id="MEQ-N5-2le"/>
+                            <constraint firstItem="p3g-np-awq" firstAttribute="leading" secondItem="6HI-z2-mXo" secondAttribute="leading" constant="109" id="WeG-UF-6ab"/>
+                            <constraint firstItem="6HI-z2-mXo" firstAttribute="bottom" secondItem="tbF-Fq-pj7" secondAttribute="bottom" constant="63" id="Y2l-j0-8H1"/>
                             <constraint firstItem="p3g-np-awq" firstAttribute="trailing" secondItem="Abw-Md-5S6" secondAttribute="trailing" id="gdA-vj-SZ4"/>
-                            <constraint firstItem="tbF-Fq-pj7" firstAttribute="leading" secondItem="6HI-z2-mXo" secondAttribute="leading" constant="77" id="mme-9s-6Le"/>
-                            <constraint firstItem="p3g-np-awq" firstAttribute="top" secondItem="1eS-rT-Y0g" secondAttribute="bottom" constant="48" id="pQe-9n-YDO"/>
-                            <constraint firstItem="1eS-rT-Y0g" firstAttribute="centerX" secondItem="p3g-np-awq" secondAttribute="centerX" id="rhw-WV-a0e"/>
-                            <constraint firstItem="1eS-rT-Y0g" firstAttribute="leading" secondItem="uWO-C5-Z8k" secondAttribute="leading" id="uag-7n-8AI"/>
+                            <constraint firstItem="tbF-Fq-pj7" firstAttribute="leading" secondItem="6HI-z2-mXo" secondAttribute="leading" constant="80" id="mme-9s-6Le"/>
+                            <constraint firstItem="6HI-z2-mXo" firstAttribute="trailing" secondItem="tbF-Fq-pj7" secondAttribute="trailing" constant="91" id="o6F-1q-Jsm"/>
                             <constraint firstItem="p3g-np-awq" firstAttribute="leading" secondItem="Abw-Md-5S6" secondAttribute="leading" id="vkP-dZ-Krw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6HI-z2-mXo"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Group Name" id="hNp-u4-nnb"/>
+                    <navigationItem key="navigationItem" title="Title" id="rhG-xj-VKd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7WM-4Q-Uln">
+                            <connections>
+                                <segue destination="LlU-sm-tt4" kind="show" identifier="doneWithHome" id="MJS-JJ-uuA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addChoresButton" destination="p3g-np-awq" id="UdZ-hO-H5C"/>
                         <outlet property="addPeopleButton" destination="Abw-Md-5S6" id="kLi-ZL-3WF"/>
-                        <outlet property="navTitle" destination="6Eo-Oo-kol" id="Fao-ne-31W"/>
+                        <outlet property="navTitle" destination="rhG-xj-VKd" id="W3p-wE-oIf"/>
                         <outlet property="randomizeButton" destination="tbF-Fq-pj7" id="x5Z-Xx-9LZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygn-Ic-Yyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783.20000000000005" y="-103.89805097451276"/>
+            <point key="canvasLocation" x="2661.5999999999999" y="-103.89805097451276"/>
         </scene>
-        <!--Add Chores View Controller-->
+        <!--Main-->
+        <scene sceneID="hff-Es-eo5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="LlU-sm-tt4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rlt-ik-k6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2963" y="-561"/>
+        </scene>
+        <!--Chores-->
         <scene sceneID="GZT-UR-1Fm">
             <objects>
                 <viewController id="kzr-LQ-82e" customClass="AddChoresViewController" customModule="ChoresApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -111,22 +112,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8J-Is-4c9">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Chores" id="gdW-DF-LU3">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jvs-Wr-Ve9">
-                                            <connections>
-                                                <segue destination="081-ml-95w" kind="unwind" identifier="cancelChore" unwindAction="unwindWithSegue:" id="qHX-DC-Hx4"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JU8-I1-17R">
                                 <rect key="frame" x="50" y="245" width="275" height="30"/>
                                 <nil key="textColor"/>
@@ -152,15 +137,19 @@
                             <constraint firstItem="8HQ-O4-aIv" firstAttribute="top" secondItem="JU8-I1-17R" secondAttribute="bottom" constant="41" id="0n1-Cc-VC6"/>
                             <constraint firstItem="VQ6-fE-nYh" firstAttribute="bottom" secondItem="8HQ-O4-aIv" secondAttribute="bottom" constant="318" id="4IS-cQ-V6f"/>
                             <constraint firstItem="8HQ-O4-aIv" firstAttribute="leading" secondItem="VQ6-fE-nYh" secondAttribute="leading" constant="133" id="7mG-QL-uvV"/>
-                            <constraint firstItem="G8J-Is-4c9" firstAttribute="top" secondItem="VQ6-fE-nYh" secondAttribute="top" id="Gao-gh-CDg"/>
                             <constraint firstItem="VQ6-fE-nYh" firstAttribute="trailing" secondItem="JU8-I1-17R" secondAttribute="trailing" constant="50" id="Gc7-tO-FAh"/>
                             <constraint firstItem="JU8-I1-17R" firstAttribute="leading" secondItem="VQ6-fE-nYh" secondAttribute="leading" constant="50" id="QTd-PU-FAy"/>
-                            <constraint firstItem="G8J-Is-4c9" firstAttribute="leading" secondItem="WIw-bv-wn2" secondAttribute="leading" id="UNi-Xb-h03"/>
                             <constraint firstItem="JU8-I1-17R" firstAttribute="centerX" secondItem="8HQ-O4-aIv" secondAttribute="centerX" id="g64-Ve-vNg"/>
-                            <constraint firstItem="G8J-Is-4c9" firstAttribute="centerX" secondItem="JU8-I1-17R" secondAttribute="centerX" id="iW1-41-54z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VQ6-fE-nYh"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Chores" id="eDR-tU-wok">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jvs-Wr-Ve9">
+                            <connections>
+                                <segue destination="081-ml-95w" kind="unwind" identifier="cancelChore" unwindAction="unwindWithSegue:" id="qHX-DC-Hx4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="choreTextField" destination="JU8-I1-17R" id="QyL-uS-K3j"/>
                         <outlet property="saveChoreButton" destination="8HQ-O4-aIv" id="iBm-zg-BAM"/>
@@ -169,7 +158,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYi-rF-PdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="081-ml-95w" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1620" y="-443.02848575712147"/>
+            <point key="canvasLocation" x="3498.4000000000001" y="-443.02848575712147"/>
         </scene>
         <!--Randomized List View Controller-->
         <scene sceneID="uYf-oe-edk">
@@ -209,32 +198,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9M-2e-GE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-156" y="653.52323838080963"/>
+            <point key="canvasLocation" x="2662" y="724"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="D1n-Wd-eL1">
-            <objects>
-                <viewController id="IAs-nW-SHb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dq0-92-XJE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QWC-Pg-9v5">
-                                <rect key="frame" x="14" y="307" width="347" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="2QE-74-zh2"/>
-                    </view>
-                    <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AUo-LG-1J5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="808.79999999999995" y="1171.6641679160421"/>
-        </scene>
-        <!--Add People View Controller-->
+        <!--People-->
         <scene sceneID="Xhy-j8-wxv">
             <objects>
                 <viewController id="2GY-8e-OLj" customClass="AddPeopleViewController" customModule="ChoresApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -260,38 +226,26 @@
                                     <segue destination="ocl-2g-DSD" kind="unwind" identifier="savePerson" unwindAction="unwindWithSegue:" id="7iW-ch-seA"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5h-9J-QTj">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="People" id="Uph-9Y-V30">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PGn-S3-m6i">
-                                            <connections>
-                                                <segue destination="ocl-2g-DSD" kind="unwind" identifier="cancelPerson" unwindAction="unwindWithSegue:" id="VWG-XH-76G"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Mmp-1K-dpi" firstAttribute="top" secondItem="w5h-9J-QTj" secondAttribute="bottom" constant="182" id="11f-vO-kcf"/>
                             <constraint firstItem="Mmp-1K-dpi" firstAttribute="leading" secondItem="2tg-Oc-o7C" secondAttribute="leading" constant="50" id="2N2-Mw-yT7"/>
                             <constraint firstItem="CtO-0s-o26" firstAttribute="leading" secondItem="2tg-Oc-o7C" secondAttribute="leading" constant="133" id="HIp-RR-DmL"/>
                             <constraint firstItem="2tg-Oc-o7C" firstAttribute="bottom" secondItem="CtO-0s-o26" secondAttribute="bottom" constant="318" id="RaD-cP-3q9"/>
                             <constraint firstItem="CtO-0s-o26" firstAttribute="top" secondItem="Mmp-1K-dpi" secondAttribute="bottom" constant="41" id="UZ4-dx-u3g"/>
-                            <constraint firstItem="w5h-9J-QTj" firstAttribute="leading" secondItem="Psv-u3-4UI" secondAttribute="leading" id="XOa-ri-JNO"/>
-                            <constraint firstItem="w5h-9J-QTj" firstAttribute="centerX" secondItem="Mmp-1K-dpi" secondAttribute="centerX" id="Z0U-F2-5M6"/>
                             <constraint firstItem="CtO-0s-o26" firstAttribute="centerX" secondItem="Mmp-1K-dpi" secondAttribute="centerX" id="eiV-jw-cr8"/>
                             <constraint firstItem="2tg-Oc-o7C" firstAttribute="trailing" secondItem="Mmp-1K-dpi" secondAttribute="trailing" constant="50" id="neo-gq-3lL"/>
                             <constraint firstItem="CtO-0s-o26" firstAttribute="top" secondItem="Mmp-1K-dpi" secondAttribute="bottom" constant="41" id="tNo-c6-YPc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2tg-Oc-o7C"/>
                     </view>
+                    <navigationItem key="navigationItem" title="People" id="Gjs-Os-fhv">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="w6a-bn-XtX">
+                            <connections>
+                                <segue destination="ocl-2g-DSD" kind="unwind" identifier="cancelPerson" unwindAction="unwindWithSegue:" id="60t-Cg-gyl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="personTextField" destination="Mmp-1K-dpi" id="Gw1-0l-Chb"/>
                         <outlet property="savePersonButton" destination="CtO-0s-o26" id="WX2-jb-bb2"/>
@@ -300,7 +254,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCm-Pd-Izv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ocl-2g-DSD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1620" y="275.71214392803603"/>
+            <point key="canvasLocation" x="3498.4000000000001" y="275.71214392803603"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gsI-Hm-1mn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UTz-dI-9zC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8cF-I4-FaD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XK3-j7-TcE" kind="relationship" relationship="rootViewController" id="hnN-aM-o7D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zsS-lo-PPX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722.4000000000001" y="-103.89805097451276"/>
         </scene>
     </scenes>
 </document>

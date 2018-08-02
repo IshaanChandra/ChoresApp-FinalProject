@@ -9,11 +9,11 @@
     </entity>
     <entity name="People" representedClassName=".People" syncable="YES">
         <attribute name="person" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="chores" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Chore" inverseName="owner" inverseEntity="Chore" syncable="YES"/>
+        <relationship name="chores" toMany="YES" deletionRule="Nullify" destinationEntity="Chore" inverseName="owner" inverseEntity="Chore" syncable="YES"/>
     </entity>
     <elements>
         <element name="Chore" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="People" positionX="-54" positionY="9" width="128" height="75"/>
         <element name="Group" positionX="-45" positionY="36" width="128" height="60"/>
+        <element name="People" positionX="-54" positionY="9" width="128" height="75"/>
     </elements>
 </model>

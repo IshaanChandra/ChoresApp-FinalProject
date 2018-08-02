@@ -28,25 +28,46 @@ class MainPageViewController: UITableViewController {
         return groups.count
     }
     
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "listNotesTableViewCell", for: indexPath) as! ListNotesTableViewCell
-//
-//        let note = notes[indexPath.row]
-//        cell.noteTitleLabel.text = note.title
-//        // 1
-//        cell.noteModificationTimeLabel.text = note.modificationTime?.convertToString() ?? "unknown"
-//
-//        return cell
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MainPageTableViewCell", for: indexPath) as! MainPageTableViewCell
+
+        let group = groups[indexPath.row]
+        cell.groupNameLabel.text = group.groupsName
+
+        return cell
+    }
     
+    //deletes note
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let groupToDelete = groups[indexPath.row]
+            CoreDataHelper.delete(group: groupToDelete)
+            
+            groups = CoreDataHelper.retrieveGroup()
+        }
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath){
+        let movedObject = self.groups[sourceIndexPath.row]
+        groups.remove(at: sourceIndexPath.row)
+        groups.insert(movedObject, at: destinationIndexPath.row)
+        NSLog("%@", "\(sourceIndexPath.row) => \(destinationIndexPath.row) \(groups)")
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
         case "displayGroup":
-            print("group cell tapped")
+            // 1
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
             
+            // 2
+            //let group = groups[indexPath.row]
+            // 3
+    
+            // 4
         case "addGroup":
             print("create group bar button item tapped")
             
