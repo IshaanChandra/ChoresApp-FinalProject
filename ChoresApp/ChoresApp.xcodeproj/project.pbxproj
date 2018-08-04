@@ -37,6 +37,7 @@
 		D1BFBCB0210F8C31007731C5 /* Chore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCAC210F8C31007731C5 /* Chore+CoreDataClass.swift */; };
 		D1BFBCB1210F8C31007731C5 /* Chore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCAD210F8C31007731C5 /* Chore+CoreDataProperties.swift */; };
 		D1BFBCB621123847007731C5 /* MainPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCB521123847007731C5 /* MainPageTableViewCell.swift */; };
+		D1BFBCB821151204007731C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBCB721151119007731C5 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,8 +74,8 @@
 		D1BFBCAB210F8C31007731C5 /* People+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "People+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D1BFBCAC210F8C31007731C5 /* Chore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chore+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D1BFBCAD210F8C31007731C5 /* Chore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chore+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D1BFBCB421117C95007731C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BFBCB521123847007731C5 /* MainPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTableViewCell.swift; sourceTree = "<group>"; };
+		D1BFBCB721151119007731C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +128,7 @@
 		D1BFBC53210698E6007731C5 /* ChoresApp */ = {
 			isa = PBXGroup;
 			children = (
-				D1BFBCB421117C95007731C5 /* Assets.xcassets */,
+				D1BFBCB721151119007731C5 /* Assets.xcassets */,
 				D1BFBC54210698E6007731C5 /* AppDelegate.swift */,
 				D1BFBCA9210F8C0B007731C5 /* CoreDataHelpers */,
 				D1BFBC95210BB7B7007731C5 /* Helpers */,
@@ -283,6 +284,7 @@
 				D1BFBC62210698E9007731C5 /* LaunchScreen.storyboard in Resources */,
 				D1BFBC70210794DB007731C5 /* GoogleService-Info.plist in Resources */,
 				D1BFBC8B2108F3E5007731C5 /* Home.storyboard in Resources */,
+				D1BFBCB821151204007731C5 /* Assets.xcassets in Resources */,
 				D1BFBC5A210698E6007731C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

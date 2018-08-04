@@ -18,9 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbF-Fq-pj7">
+                                <rect key="frame" x="80" y="536" width="204" height="68"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.0" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="ngL-cJ-K7D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Randomize">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomizeButtonTapped:" destination="XK3-j7-TcE" eventType="touchUpInside" id="BvQ-oU-wiz"/>
+                                    <segue destination="c2O-x4-4Kj" kind="show" id="bIs-Lj-bb7"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-np-awq">
-                                <rect key="frame" x="109" y="164" width="146" height="35"/>
-                                <color key="backgroundColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="19" y="100" width="146" height="35"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.0" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="qEg-OT-ATD"/>
                                 </constraints>
@@ -34,8 +49,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abw-Md-5S6">
-                                <rect key="frame" x="109" y="230" width="146" height="35"/>
-                                <color key="backgroundColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="203" y="100" width="146" height="35"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.0" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Ijj-la-2Vn"/>
                                 </constraints>
@@ -48,38 +63,24 @@
                                     <segue destination="2GY-8e-OLj" kind="show" identifier="addPeople" id="5uR-Ry-ZAZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbF-Fq-pj7">
-                                <rect key="frame" x="80" y="536" width="204" height="68"/>
-                                <color key="backgroundColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="ngL-cJ-K7D"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="Randomize">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="randomizeButtonTapped:" destination="XK3-j7-TcE" eventType="touchUpInside" id="BvQ-oU-wiz"/>
-                                    <segue destination="c2O-x4-4Kj" kind="show" id="bIs-Lj-bb7"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Abw-Md-5S6" firstAttribute="centerX" secondItem="tbF-Fq-pj7" secondAttribute="centerX" id="3s8-EN-If2"/>
-                            <constraint firstItem="Abw-Md-5S6" firstAttribute="top" secondItem="p3g-np-awq" secondAttribute="bottom" constant="31" id="Boj-mD-nTH"/>
-                            <constraint firstItem="p3g-np-awq" firstAttribute="top" secondItem="6HI-z2-mXo" secondAttribute="top" constant="100" id="MEQ-N5-2le"/>
-                            <constraint firstItem="p3g-np-awq" firstAttribute="leading" secondItem="6HI-z2-mXo" secondAttribute="leading" constant="109" id="WeG-UF-6ab"/>
+                            <constraint firstItem="Abw-Md-5S6" firstAttribute="centerX" secondItem="tbF-Fq-pj7" secondAttribute="centerX" constant="94" id="3s8-EN-If2"/>
+                            <constraint firstItem="Abw-Md-5S6" firstAttribute="top" secondItem="p3g-np-awq" secondAttribute="bottom" constant="-35" id="Boj-mD-nTH"/>
+                            <constraint firstItem="p3g-np-awq" firstAttribute="top" secondItem="6HI-z2-mXo" secondAttribute="top" constant="36" id="MEQ-N5-2le"/>
+                            <constraint firstItem="p3g-np-awq" firstAttribute="leading" secondItem="6HI-z2-mXo" secondAttribute="leading" constant="19" id="WeG-UF-6ab"/>
                             <constraint firstItem="6HI-z2-mXo" firstAttribute="bottom" secondItem="tbF-Fq-pj7" secondAttribute="bottom" constant="63" id="Y2l-j0-8H1"/>
-                            <constraint firstItem="p3g-np-awq" firstAttribute="trailing" secondItem="Abw-Md-5S6" secondAttribute="trailing" id="gdA-vj-SZ4"/>
+                            <constraint firstItem="p3g-np-awq" firstAttribute="trailing" secondItem="Abw-Md-5S6" secondAttribute="trailing" constant="-184" id="gdA-vj-SZ4"/>
                             <constraint firstItem="tbF-Fq-pj7" firstAttribute="leading" secondItem="6HI-z2-mXo" secondAttribute="leading" constant="80" id="mme-9s-6Le"/>
                             <constraint firstItem="6HI-z2-mXo" firstAttribute="trailing" secondItem="tbF-Fq-pj7" secondAttribute="trailing" constant="91" id="o6F-1q-Jsm"/>
-                            <constraint firstItem="p3g-np-awq" firstAttribute="leading" secondItem="Abw-Md-5S6" secondAttribute="leading" id="vkP-dZ-Krw"/>
+                            <constraint firstItem="p3g-np-awq" firstAttribute="leading" secondItem="Abw-Md-5S6" secondAttribute="leading" constant="-184" id="vkP-dZ-Krw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6HI-z2-mXo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="rhG-xj-VKd">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="7WM-4Q-Uln">
+                            <color key="tintColor" red="0.30196078431372547" green="0.73725490196078436" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="LlU-sm-tt4" kind="show" identifier="doneWithHome" id="MJS-JJ-uuA"/>
                             </connections>
@@ -120,9 +121,9 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HQ-O4-aIv">
                                 <rect key="frame" x="133" y="316" width="109" height="33"/>
-                                <color key="backgroundColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.0" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <color key="tintColor" red="0.41960784309999999" green="0.86274509799999999" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.5568627451" green="0.0" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -132,7 +133,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="8HQ-O4-aIv" firstAttribute="top" secondItem="JU8-I1-17R" secondAttribute="bottom" constant="41" id="0n1-Cc-VC6"/>
                             <constraint firstItem="VQ6-fE-nYh" firstAttribute="bottom" secondItem="8HQ-O4-aIv" secondAttribute="bottom" constant="318" id="4IS-cQ-V6f"/>
@@ -145,6 +146,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Chores" id="eDR-tU-wok">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jvs-Wr-Ve9">
+                            <color key="tintColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="081-ml-95w" kind="unwind" identifier="cancelChore" unwindAction="unwindWithSegue:" id="qHX-DC-Hx4"/>
                             </connections>
@@ -177,7 +179,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOH-1j-LVD">
-                                            <rect key="frame" x="16" y="3" width="343" height="37"/>
+                                            <rect key="frame" x="16" y="9" width="359" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                             <nil key="textColor"/>
@@ -198,7 +200,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9M-2e-GE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2662" y="724"/>
+            <point key="canvasLocation" x="2661.5999999999999" y="723.68815592203907"/>
         </scene>
         <!--People-->
         <scene sceneID="Xhy-j8-wxv">
@@ -216,7 +218,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtO-0s-o26">
                                 <rect key="frame" x="133" y="317" width="109" height="32"/>
-                                <color key="backgroundColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.0" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -227,7 +229,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Mmp-1K-dpi" firstAttribute="leading" secondItem="2tg-Oc-o7C" secondAttribute="leading" constant="50" id="2N2-Mw-yT7"/>
                             <constraint firstItem="CtO-0s-o26" firstAttribute="leading" secondItem="2tg-Oc-o7C" secondAttribute="leading" constant="133" id="HIp-RR-DmL"/>
@@ -241,6 +243,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="People" id="Gjs-Os-fhv">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="w6a-bn-XtX">
+                            <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="ocl-2g-DSD" kind="unwind" identifier="cancelPerson" unwindAction="unwindWithSegue:" id="60t-Cg-gyl"/>
                             </connections>
@@ -264,7 +267,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8cF-I4-FaD">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.5568627451" green="0.0" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
