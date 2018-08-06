@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import FirebaseAuth
+import CoreData
 
 class MainPageViewController: UITableViewController {
     
@@ -23,20 +24,24 @@ class MainPageViewController: UITableViewController {
         self.tableView.isEditing = false
         groups = CoreDataHelper.retrieveGroup()
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(handleSignOutButtonTapped))
+        //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(handleSignOutButtonTapped))
+        
+
         
     }
+
+//    @objc func handleSignOutButtonTapped() {
+//        do {
+//            //CoreDataHelper.delete(person: People)
+//            try Auth.auth().signOut()
+//            let loginViewController = LoginViewController()
+//            let loginNavigationController = UINavigationController(rootViewController: loginViewController)
+//            self.present(loginNavigationController, animated: true, completion: nil)
+//        } catch let err {
+//            print("Failed to sign out with error", err)
+//        }
+//    }
     
-    @objc func handleSignOutButtonTapped() {
-        do {
-            try Auth.auth().signOut()
-            let loginViewController = LoginViewController()
-            let loginNavigationController = UINavigationController(rootViewController: loginViewController)
-            self.present(loginNavigationController, animated: true, completion: nil)
-        } catch let err {
-            print("Failed to sign out with error", err)
-        }
-    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return groups.count
     }

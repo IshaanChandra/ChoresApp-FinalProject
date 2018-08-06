@@ -49,3 +49,13 @@ class User: Codable {
         _current = user
     }
 }
+
+
+//class Dinosaur {
+//    var name
+//    init(name: String) {
+//        self.name = name
+//    }
+//}
+//
+//let T-Rex = Dinosaur(name: T-Rex)

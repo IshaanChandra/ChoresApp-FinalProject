@@ -15,7 +15,6 @@
 		D1BFBC62210698E9007731C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBC60210698E9007731C5 /* LaunchScreen.storyboard */; };
 		D1BFBC6C21078CCD007731C5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBC6B21078CCD007731C5 /* Login.storyboard */; };
 		D1BFBC6E21078F1E007731C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC6D21078F1E007731C5 /* LoginViewController.swift */; };
-		D1BFBC70210794DB007731C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBC6F210794DB007731C5 /* GoogleService-Info.plist */; };
 		D1BFBC732107A07C007731C5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC722107A07C007731C5 /* User.swift */; };
 		D1BFBC752107A48C007731C5 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC742107A48C007731C5 /* CreateUsernameViewController.swift */; };
 		D1BFBC782107BC4F007731C5 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC772107BC4F007731C5 /* UserService.swift */; };
@@ -38,6 +37,9 @@
 		D1BFBCB1210F8C31007731C5 /* Chore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCAD210F8C31007731C5 /* Chore+CoreDataProperties.swift */; };
 		D1BFBCB621123847007731C5 /* MainPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCB521123847007731C5 /* MainPageTableViewCell.swift */; };
 		D1BFBCB821151204007731C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBCB721151119007731C5 /* Assets.xcassets */; };
+		D1BFBCBA2117E160007731C5 /* ChoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCB92117E15F007731C5 /* ChoreCell.swift */; };
+		D1BFBCBC21180579007731C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBCBB21180579007731C5 /* GoogleService-Info.plist */; };
+		D1BFBCBE2118C2E6007731C5 /* Chores.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCBD2118C2E6007731C5 /* Chores.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +55,6 @@
 		D1BFBC63210698E9007731C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1BFBC6B21078CCD007731C5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D1BFBC6D21078F1E007731C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D1BFBC6F210794DB007731C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1BFBC722107A07C007731C5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D1BFBC742107A48C007731C5 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		D1BFBC772107BC4F007731C5 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -76,6 +77,9 @@
 		D1BFBCAD210F8C31007731C5 /* Chore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chore+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D1BFBCB521123847007731C5 /* MainPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTableViewCell.swift; sourceTree = "<group>"; };
 		D1BFBCB721151119007731C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1BFBCB92117E15F007731C5 /* ChoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreCell.swift; sourceTree = "<group>"; };
+		D1BFBCBB21180579007731C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D1BFBCBD2118C2E6007731C5 /* Chores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chores.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +142,7 @@
 				D1BFBC6A21069A31007731C5 /* Controllers */,
 				D1BFBC6921069A28007731C5 /* Storyboards */,
 				D1BFBC63210698E9007731C5 /* Info.plist */,
-				D1BFBC6F210794DB007731C5 /* GoogleService-Info.plist */,
+				D1BFBCBB21180579007731C5 /* GoogleService-Info.plist */,
 				D1BFBC5B210698E6007731C5 /* ChoresApp.xcdatamodeld */,
 				D1BFBC7B2107F42B007731C5 /* Constants.swift */,
 				D1BFBC7D2107F597007731C5 /* Storyboard+Utility.swift */,
@@ -178,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				D1BFBC722107A07C007731C5 /* User.swift */,
+				D1BFBCBD2118C2E6007731C5 /* Chores.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				D1BFBC8D21090D8A007731C5 /* listChoresTableViewCell.swift */,
 				D1BFBC9C210BCD59007731C5 /* RandomizedListTableViewCell.swift */,
 				D1BFBCB521123847007731C5 /* MainPageTableViewCell.swift */,
+				D1BFBCB92117E15F007731C5 /* ChoreCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -282,10 +288,10 @@
 			files = (
 				D1BFBC6C21078CCD007731C5 /* Login.storyboard in Resources */,
 				D1BFBC62210698E9007731C5 /* LaunchScreen.storyboard in Resources */,
-				D1BFBC70210794DB007731C5 /* GoogleService-Info.plist in Resources */,
 				D1BFBC8B2108F3E5007731C5 /* Home.storyboard in Resources */,
 				D1BFBCB821151204007731C5 /* Assets.xcassets in Resources */,
 				D1BFBC5A210698E6007731C5 /* Main.storyboard in Resources */,
+				D1BFBCBC21180579007731C5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,9 +368,11 @@
 				D1BFBC852108E663007731C5 /* ChoresViewController.swift in Sources */,
 				D1BFBCAF210F8C31007731C5 /* People+CoreDataProperties.swift in Sources */,
 				D1BFBC7A2107E9A9007731C5 /* MainPageViewController.swift in Sources */,
+				D1BFBCBA2117E160007731C5 /* ChoreCell.swift in Sources */,
 				D1BFBCB0210F8C31007731C5 /* Chore+CoreDataClass.swift in Sources */,
 				D1BFBCAE210F8C31007731C5 /* People+CoreDataClass.swift in Sources */,
 				D1BFBC832108DEB6007731C5 /* AddGroupNameViewController.swift in Sources */,
+				D1BFBCBE2118C2E6007731C5 /* Chores.swift in Sources */,
 				D1BFBC8E21090D8A007731C5 /* listChoresTableViewCell.swift in Sources */,
 				D1BFBC97210BB7CC007731C5 /* CoreDataHelper.swift in Sources */,
 				D1BFBC782107BC4F007731C5 /* UserService.swift in Sources */,
@@ -534,7 +542,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.IshaanChandra.ChoresApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IshaanChandra.ChoresApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -553,7 +561,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.IshaanChandra.ChoresApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IshaanChandra.ChoresApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

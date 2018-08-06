@@ -18,21 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbF-Fq-pj7">
-                                <rect key="frame" x="80" y="536" width="204" height="68"/>
-                                <color key="backgroundColor" red="0.5568627451" green="0.0" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="ngL-cJ-K7D"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                <state key="normal" title="Randomize">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="randomizeButtonTapped:" destination="XK3-j7-TcE" eventType="touchUpInside" id="BvQ-oU-wiz"/>
-                                    <segue destination="c2O-x4-4Kj" kind="show" id="bIs-Lj-bb7"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-np-awq">
                                 <rect key="frame" x="19" y="100" width="146" height="35"/>
                                 <color key="backgroundColor" red="0.5568627451" green="0.0" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,17 +48,66 @@
                                     <segue destination="2GY-8e-OLj" kind="show" identifier="addPeople" id="5uR-Ry-ZAZ"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fYy-hj-c7b">
+                                <rect key="frame" x="0.0" y="288" width="375" height="379"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChoreCell" id="l35-AI-fLW" customClass="ChoreCell" customModule="ChoresApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l35-AI-fLW" id="rzM-dg-N7K">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIl-YF-pFZ">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="choreTextLabel" destination="gIl-YF-pFZ" id="VYY-4L-o6T"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XK3-j7-TcE" id="CDr-Pe-J4f"/>
+                                    <outlet property="delegate" destination="XK3-j7-TcE" id="2gZ-5o-7Ie"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbF-Fq-pj7">
+                                <rect key="frame" x="85" y="187" width="204" height="68"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.0" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="ngL-cJ-K7D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Randomize">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomizeButtonTapped:" destination="XK3-j7-TcE" eventType="touchUpInside" id="BvQ-oU-wiz"/>
+                                    <segue destination="c2O-x4-4Kj" kind="show" id="bIs-Lj-bb7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Abw-Md-5S6" firstAttribute="centerX" secondItem="tbF-Fq-pj7" secondAttribute="centerX" constant="94" id="3s8-EN-If2"/>
+                            <constraint firstItem="Abw-Md-5S6" firstAttribute="centerX" secondItem="tbF-Fq-pj7" secondAttribute="centerX" constant="89" id="3s8-EN-If2"/>
                             <constraint firstItem="Abw-Md-5S6" firstAttribute="top" secondItem="p3g-np-awq" secondAttribute="bottom" constant="-35" id="Boj-mD-nTH"/>
+                            <constraint firstItem="fYy-hj-c7b" firstAttribute="leading" secondItem="uWO-C5-Z8k" secondAttribute="leading" id="Jrg-qj-Oca"/>
                             <constraint firstItem="p3g-np-awq" firstAttribute="top" secondItem="6HI-z2-mXo" secondAttribute="top" constant="36" id="MEQ-N5-2le"/>
                             <constraint firstItem="p3g-np-awq" firstAttribute="leading" secondItem="6HI-z2-mXo" secondAttribute="leading" constant="19" id="WeG-UF-6ab"/>
-                            <constraint firstItem="6HI-z2-mXo" firstAttribute="bottom" secondItem="tbF-Fq-pj7" secondAttribute="bottom" constant="63" id="Y2l-j0-8H1"/>
+                            <constraint firstItem="fYy-hj-c7b" firstAttribute="top" secondItem="tbF-Fq-pj7" secondAttribute="bottom" constant="33" id="X8B-GO-6GY"/>
+                            <constraint firstItem="6HI-z2-mXo" firstAttribute="bottom" secondItem="tbF-Fq-pj7" secondAttribute="bottom" constant="412" id="Y2l-j0-8H1"/>
+                            <constraint firstItem="fYy-hj-c7b" firstAttribute="centerX" secondItem="tbF-Fq-pj7" secondAttribute="centerX" id="cu4-o1-Ipd"/>
                             <constraint firstItem="p3g-np-awq" firstAttribute="trailing" secondItem="Abw-Md-5S6" secondAttribute="trailing" constant="-184" id="gdA-vj-SZ4"/>
-                            <constraint firstItem="tbF-Fq-pj7" firstAttribute="leading" secondItem="6HI-z2-mXo" secondAttribute="leading" constant="80" id="mme-9s-6Le"/>
-                            <constraint firstItem="6HI-z2-mXo" firstAttribute="trailing" secondItem="tbF-Fq-pj7" secondAttribute="trailing" constant="91" id="o6F-1q-Jsm"/>
+                            <constraint firstItem="tbF-Fq-pj7" firstAttribute="leading" secondItem="6HI-z2-mXo" secondAttribute="leading" constant="85" id="mme-9s-6Le"/>
+                            <constraint firstItem="6HI-z2-mXo" firstAttribute="trailing" secondItem="tbF-Fq-pj7" secondAttribute="trailing" constant="86" id="o6F-1q-Jsm"/>
+                            <constraint firstItem="fYy-hj-c7b" firstAttribute="bottom" secondItem="6HI-z2-mXo" secondAttribute="bottom" id="qDp-8L-jai"/>
                             <constraint firstItem="p3g-np-awq" firstAttribute="leading" secondItem="Abw-Md-5S6" secondAttribute="leading" constant="-184" id="vkP-dZ-Krw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6HI-z2-mXo"/>
@@ -91,6 +125,7 @@
                         <outlet property="addPeopleButton" destination="Abw-Md-5S6" id="kLi-ZL-3WF"/>
                         <outlet property="navTitle" destination="rhG-xj-VKd" id="W3p-wE-oIf"/>
                         <outlet property="randomizeButton" destination="tbF-Fq-pj7" id="x5Z-Xx-9LZ"/>
+                        <outlet property="tableView" destination="fYy-hj-c7b" id="xOe-fr-uVX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygn-Ic-Yyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -146,7 +181,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Chores" id="eDR-tU-wok">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jvs-Wr-Ve9">
-                            <color key="tintColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="tintColor" red="0.30196078431372547" green="0.73725490196078436" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="081-ml-95w" kind="unwind" identifier="cancelChore" unwindAction="unwindWithSegue:" id="qHX-DC-Hx4"/>
                             </connections>
@@ -243,7 +278,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="People" id="Gjs-Os-fhv">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="w6a-bn-XtX">
-                            <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.30196078430000001" green="0.73725490199999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="ocl-2g-DSD" kind="unwind" identifier="cancelPerson" unwindAction="unwindWithSegue:" id="60t-Cg-gyl"/>
                             </connections>
