@@ -55,6 +55,7 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+        chores = CoreDataHelper.retrieveChores()
         insertNewChore()
     }
     
@@ -70,11 +71,6 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
     func insertNewChore() {
         displayedChores.append(chores.last!)
         
-//        let indexPath = IndexPath(row: displayedChores.count - 1, section: 0)
-//
-//        tableView.beginUpdates()
-//        tableView.insertRows(at: [indexPath], with: .automatic)
-//        tableView.endUpdates()
         tableView.reloadData()
         view.endEditing(true)
     }

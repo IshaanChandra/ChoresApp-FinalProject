@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		14519DA4FDED3C6C0EA5125C /* Pods_ChoresApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23951E186E09D24D128BB521 /* Pods_ChoresApp.framework */; };
 		D1BFBC55210698E6007731C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC54210698E6007731C5 /* AppDelegate.swift */; };
-		D1BFBC57210698E6007731C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC56210698E6007731C5 /* ViewController.swift */; };
 		D1BFBC5A210698E6007731C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBC58210698E6007731C5 /* Main.storyboard */; };
 		D1BFBC5D210698E6007731C5 /* ChoresApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBC5B210698E6007731C5 /* ChoresApp.xcdatamodeld */; };
 		D1BFBC62210698E9007731C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBC60210698E9007731C5 /* LaunchScreen.storyboard */; };
@@ -38,7 +37,7 @@
 		D1BFBCB621123847007731C5 /* MainPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCB521123847007731C5 /* MainPageTableViewCell.swift */; };
 		D1BFBCB821151204007731C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBCB721151119007731C5 /* Assets.xcassets */; };
 		D1BFBCBA2117E160007731C5 /* ChoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCB92117E15F007731C5 /* ChoreCell.swift */; };
-		D1BFBCBC21180579007731C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBCBB21180579007731C5 /* GoogleService-Info.plist */; };
+		D1BFBCC02118E782007731C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBCBF2118E782007731C5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +46,6 @@
 		B5DBD84483320921153BD532 /* Pods-ChoresApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoresApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoresApp/Pods-ChoresApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D1BFBC51210698E6007731C5 /* ChoresApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChoresApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BFBC54210698E6007731C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D1BFBC56210698E6007731C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D1BFBC59210698E6007731C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1BFBC5C210698E6007731C5 /* ChoresApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChoresApp.xcdatamodel; sourceTree = "<group>"; };
 		D1BFBC61210698E9007731C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,7 +75,7 @@
 		D1BFBCB521123847007731C5 /* MainPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTableViewCell.swift; sourceTree = "<group>"; };
 		D1BFBCB721151119007731C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BFBCB92117E15F007731C5 /* ChoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreCell.swift; sourceTree = "<group>"; };
-		D1BFBCBB21180579007731C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D1BFBCBF2118E782007731C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +138,7 @@
 				D1BFBC6A21069A31007731C5 /* Controllers */,
 				D1BFBC6921069A28007731C5 /* Storyboards */,
 				D1BFBC63210698E9007731C5 /* Info.plist */,
-				D1BFBCBB21180579007731C5 /* GoogleService-Info.plist */,
+				D1BFBCBF2118E782007731C5 /* GoogleService-Info.plist */,
 				D1BFBC5B210698E6007731C5 /* ChoresApp.xcdatamodeld */,
 				D1BFBC7B2107F42B007731C5 /* Constants.swift */,
 				D1BFBC7D2107F597007731C5 /* Storyboard+Utility.swift */,
@@ -163,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				D1BFBC842108E663007731C5 /* ChoresViewController.swift */,
-				D1BFBC56210698E6007731C5 /* ViewController.swift */,
 				D1BFBC6D21078F1E007731C5 /* LoginViewController.swift */,
 				D1BFBC742107A48C007731C5 /* CreateUsernameViewController.swift */,
 				D1BFBC792107E9A9007731C5 /* MainPageViewController.swift */,
@@ -288,7 +285,7 @@
 				D1BFBC8B2108F3E5007731C5 /* Home.storyboard in Resources */,
 				D1BFBCB821151204007731C5 /* Assets.xcassets in Resources */,
 				D1BFBC5A210698E6007731C5 /* Main.storyboard in Resources */,
-				D1BFBCBC21180579007731C5 /* GoogleService-Info.plist in Resources */,
+				D1BFBCC02118E782007731C5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +372,6 @@
 				D1BFBC94210B82E2007731C5 /* AddPeopleViewController.swift in Sources */,
 				D1BFBC6E21078F1E007731C5 /* LoginViewController.swift in Sources */,
 				D1BFBCB621123847007731C5 /* MainPageTableViewCell.swift in Sources */,
-				D1BFBC57210698E6007731C5 /* ViewController.swift in Sources */,
 				D1BFBC752107A48C007731C5 /* CreateUsernameViewController.swift in Sources */,
 				D1BFBCB1210F8C31007731C5 /* Chore+CoreDataProperties.swift in Sources */,
 				D1BFBC9D210BCD59007731C5 /* RandomizedListTableViewCell.swift in Sources */,

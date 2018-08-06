@@ -30,12 +30,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        guard let authUI = FUIAuth.defaultAuthUI()
-            else { return }
-        
-        authUI.delegate = self
-        let authViewController = authUI.authViewController()
-        present(authViewController, animated: true)
+//        guard let authUI = FUIAuth.defaultAuthUI()
+//            else { return }
+//
+//        authUI.delegate = self
+//        let authViewController = authUI.authViewController()
+//        present(authViewController, animated: true)
 
     }
     
@@ -50,17 +50,21 @@ extension LoginViewController: FUIAuthDelegate {
         
         guard let user = user
             else { return }
-        
-        UserService.show(forUID: user.uid) { (user) in
-            if let user = user {
-                User.setCurrent(user, writeToUserDefaults: true)
-                
-                let initialViewController = UIStoryboard.initialViewController(for: .main)
-                self.view.window?.rootViewController = initialViewController
-                self.view.window?.makeKeyAndVisible()
-            } else {
-                self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
-            }
-        }
+
+//        UserService.show(forUID: user.uid) { (user) in
+//            if let user = user {
+//                User.setCurrent(user, writeToUserDefaults: true)
+//
+//                let initialViewController = UIStoryboard.initialViewController(for: .main)
+//                self.view.window?.rootViewController = initialViewController
+//                self.view.window?.makeKeyAndVisible()
+//            } else {
+//                self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
+//            }
+//        }
+        let initialViewController = UIStoryboard.initialViewController(for: .main)
+        self.view.window?.rootViewController = initialViewController
+        self.view.window?.makeKeyAndVisible()
     }
+    
 }
