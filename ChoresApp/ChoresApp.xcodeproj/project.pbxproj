@@ -39,7 +39,6 @@
 		D1BFBCB821151204007731C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBCB721151119007731C5 /* Assets.xcassets */; };
 		D1BFBCBA2117E160007731C5 /* ChoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCB92117E15F007731C5 /* ChoreCell.swift */; };
 		D1BFBCBC21180579007731C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1BFBCBB21180579007731C5 /* GoogleService-Info.plist */; };
-		D1BFBCBE2118C2E6007731C5 /* Chores.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BFBCBD2118C2E6007731C5 /* Chores.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +78,6 @@
 		D1BFBCB721151119007731C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1BFBCB92117E15F007731C5 /* ChoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoreCell.swift; sourceTree = "<group>"; };
 		D1BFBCBB21180579007731C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D1BFBCBD2118C2E6007731C5 /* Chores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chores.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				D1BFBC722107A07C007731C5 /* User.swift */,
-				D1BFBCBD2118C2E6007731C5 /* Chores.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -372,7 +369,6 @@
 				D1BFBCB0210F8C31007731C5 /* Chore+CoreDataClass.swift in Sources */,
 				D1BFBCAE210F8C31007731C5 /* People+CoreDataClass.swift in Sources */,
 				D1BFBC832108DEB6007731C5 /* AddGroupNameViewController.swift in Sources */,
-				D1BFBCBE2118C2E6007731C5 /* Chores.swift in Sources */,
 				D1BFBC8E21090D8A007731C5 /* listChoresTableViewCell.swift in Sources */,
 				D1BFBC97210BB7CC007731C5 /* CoreDataHelper.swift in Sources */,
 				D1BFBC782107BC4F007731C5 /* UserService.swift in Sources */,
