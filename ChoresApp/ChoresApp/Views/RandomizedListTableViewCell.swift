@@ -12,6 +12,5 @@ import UIKit
 class RandomizedListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var personNameLabel: UILabel!
-    @IBOutlet weak var choresGivenLabel: UILabel!
-    
+    @IBOutlet weak var viewCell: UIView!
 }

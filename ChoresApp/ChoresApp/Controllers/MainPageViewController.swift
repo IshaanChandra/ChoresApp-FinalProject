@@ -29,10 +29,6 @@ class MainPageViewController: UITableViewController {
         chores = CoreDataHelper.retrieveChores()
         people = CoreDataHelper.retrievePerson()
         
-        //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(handleSignOutButtonTapped))
-        
-
-        
     }
     
     func deleteAllChores() {
@@ -76,7 +72,7 @@ class MainPageViewController: UITableViewController {
         cell.groupNameLabel.text = group.groupsName
         
         cell.viewCell.layer.cornerRadius = 6.0
-        cell.viewCell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.viewCell.layer.shadowColor = UIColor.gray.cgColor
         cell.viewCell.layer.shadowOffset = .zero
         cell.viewCell.layer.shadowOpacity = 0.6
         cell.viewCell.layer.shadowRadius = 5.0
@@ -93,16 +89,9 @@ class MainPageViewController: UITableViewController {
             CoreDataHelper.delete(group: groupToDelete)
             groups = CoreDataHelper.retrieveGroup()
             
-        deleteAllPeople()
-        deleteAllChores()
+            deleteAllPeople()
+            deleteAllChores()
             
-//            let choreToDelete = chores[indexPath.row]
-//            CoreDataHelper.delete(chore: choreToDelete)
-//            chores = CoreDataHelper.retrieveChores()
-//
-//            let personToDelete = people[indexPath.row]
-//            CoreDataHelper.delete(person: personToDelete)
-//            people = CoreDataHelper.retrievePerson()
         }
     }
     
@@ -119,14 +108,9 @@ class MainPageViewController: UITableViewController {
         
         switch identifier {
         case "displayGroup":
-            // 1
+            
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
             
-            // 2
-            //let group = groups[indexPath.row]
-            // 3
-    
-            // 4
         case "addGroup":
             print("create group bar button item tapped")
             

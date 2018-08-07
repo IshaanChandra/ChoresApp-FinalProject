@@ -26,12 +26,7 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
     }
     var displayedPeople: [People] = []
     
-    var choresCount = Int()
-    var peopleCount = Int()
-    
-    var choresIndex: Int = 0
-    var peopleIndex: Int = 0
-    
+
     @IBOutlet weak var addChoresButton: UIButton!
     @IBOutlet weak var addPeopleButton: UIButton!
     @IBOutlet weak var randomizeButton: UIButton!
@@ -46,14 +41,12 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
         chores = CoreDataHelper.retrieveChores()
         people = CoreDataHelper.retrievePerson()
         
-        if chores.count == 0 {
+        if chores.count == 0 && people.count == 0 {
             broomImg.isHidden = false
         } else {
             broomImg.isHidden = true
         }
-        
-        choresCount = chores.count
-        peopleCount = people.count
+
         
         tableView.reloadData()
     }
@@ -69,25 +62,28 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
         randomizeButton.layer.cornerRadius = 6
         
         let group = groups.last
-
+        
         self.navTitle.title =  group?.groupsName
+        
+        
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.767149806, green: 0.3626476526, blue: 1, alpha: 1)
         
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         
-    
+        
     }
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
         
         if segue.identifier == "saveChore" {
             chores = CoreDataHelper.retrieveChores()
-            choresIndex = choresIndex + 1
+            
             insertNewChore()
         }
         
         if segue.identifier == "savePerson" {
             people = CoreDataHelper.retrievePerson()
-            peopleIndex = peopleIndex + 1
+            
             insertNewPerson()
         }
     }
@@ -100,7 +96,7 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func randomizeButtonTapped(_ sender: Any) {
     }
-
+    
     func insertNewChore() {
         displayedChores.append(chores.last!)
         
@@ -119,32 +115,65 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
 
 extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        switch section {
+        case 0: return "People"
+        case 1: return "Chores"
+        default: fatalError("Index out of range!")
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        header.textLabel?.font = UIFont.systemFont(ofSize: 20)
+       // header.textLabel?.frame = header.frame
+        //header.textLabel?.textAlignment = .left
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chores.count + people.count
+        switch  section {
+        case 0: return people.count
+        case 1: return chores.count
+    
+        default:
+            fatalError("oo")
+        }
+        
     }
 
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChoreCell") as! ChoreCell
+ 
         
-       
-        
-        
-        if choresIndex == choresCount {
-            let newChore = chores[indexPath.row]
-            cell.choreTextLabel.text = newChore.choreItem
+        switch indexPath.section{
+            
+        case 0:
+            if people.count != 0 {
+                let newPerson = people[indexPath.row]
+                cell.choreTextLabel.text = newPerson.person
+            }
+            
+        case 1:
+            if chores.count != 0 {
+                let newChore = chores[indexPath.row]
+                cell.choreTextLabel.text = newChore.choreItem
+            }
+            
+        default: fatalError("Poo")
         }
-        
-        if peopleIndex == peopleCount {
-            let newPerson = people[indexPath.row]
-            cell.choreTextLabel.text = newPerson.person
-        }
-        
-
         
         
         cell.choreViewCell.layer.cornerRadius = 5.0
-        cell.choreViewCell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.choreViewCell.layer.shadowColor = UIColor.gray.cgColor
         cell.choreViewCell.layer.shadowOffset = .zero
         cell.choreViewCell.layer.shadowOpacity = 0.6
         cell.choreViewCell.layer.shadowRadius = 5.0
@@ -161,21 +190,26 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
-//        if editingStyle == .delete {
-//            chores.remove(at: indexPath.row)
-//
-//            tableView.beginUpdates()
-//            tableView.deleteRows(at: [indexPath], with: .automatic)
-//        }
-        
         if editingStyle == .delete {
-            let choreToDelete = chores[indexPath.row]
-            CoreDataHelper.delete(chore: choreToDelete)
             
-            chores = CoreDataHelper.retrieveChores()
+            
+            switch indexPath.section{
+            case 0:
+                let personToDelete = people[indexPath.row]
+                CoreDataHelper.delete(person: personToDelete)
+                people = CoreDataHelper.retrievePerson()
+            case 1:
+                let choreToDelete = chores[indexPath.row]
+                CoreDataHelper.delete(chore: choreToDelete)
+                
+                chores = CoreDataHelper.retrieveChores()
+            default:
+                fatalError("fatal")
+            }
         }
         
+        
     }
-
+    
 }
 

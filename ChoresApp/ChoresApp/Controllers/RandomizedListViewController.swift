@@ -95,7 +95,14 @@ class RandomizedListViewController: UITableViewController {
         
         choreText = String(choreText.dropLast(2))
         
-        cell.personNameLabel.text = people[indexPath.row].person! + ": " + choreText
+        cell.personNameLabel.text = " " + people[indexPath.row].person! + ": " + choreText
+        
+        cell.viewCell.layer.cornerRadius = 5.0
+        cell.viewCell.layer.shadowColor = UIColor.gray.cgColor
+        cell.viewCell.layer.shadowOffset = .zero
+        cell.viewCell.layer.shadowOpacity = 0.6
+        cell.viewCell.layer.shadowRadius = 5.0
+        cell.viewCell.layer.shadowPath = UIBezierPath(rect: cell.viewCell.bounds).cgPath
         
         return cell
     }

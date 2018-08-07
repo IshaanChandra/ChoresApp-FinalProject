@@ -64,19 +64,6 @@ struct CoreDataHelper {
             print(err.debugDescription)
             return []
         }
-        
-        
-        
-//        do {
-//            let fetchRequest = NSFetchRequest<Chore>(entityName: "Chore")
-//            let results = try context.fetch(fetchRequest)
-//
-//            return results
-//        } catch let error {
-//            print("Could not fetch \(error.localizedDescription)")
-//
-//            return []
-//        }
     }
     
     //People
@@ -120,19 +107,6 @@ struct CoreDataHelper {
             print(err.debugDescription)
             return []
         }
-       
-        
-        
-//        do {
-//            let fetchRequest = NSFetchRequest<People>(entityName: "People")
-//            let results = try context.fetch(fetchRequest)
-//
-//            return results
-//        } catch let error {
-//            print("Could not fetch \(error.localizedDescription)")
-//
-//            return []
-//        }
     }
     
     

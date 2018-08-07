@@ -93,23 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    
-//    func addToPerson() {
-//        let context = persistentContainer.viewContext
-//        
-//        let person = People(context: context)
-//        person.person = "testPerson"
-//        
-//        let chore1 = People(context: context)
-//        chores.choreItem = "testChore1"
-//        chores.addToPerson(chore1)
-//        
-//        let chore2 = People(context: context)
-//        chores.choreItem = "testChore2"
-//        chores.addToFriends(chore2)
-//        
-//        saveContext()
-//    }
+
 }
 
 extension AppDelegate {
@@ -127,23 +111,4 @@ extension AppDelegate {
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
     }
-    
-    
-    
-//    func configureInitialRootViewController(for window: UIWindow?) {
-//        //let defaults = UserDefaults.standard
-//        let initialViewController: UIViewController
-//
-//        if let _ = Auth.auth().currentUser {
-//            //let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
-//            //let user = try? JSONDecoder().decode(User.self, from: userData) {
-//            //User.setCurrent(user)
-//            initialViewController = UIStoryboard.initialViewController(for: .main)
-//        } else {
-//            initialViewController = UIStoryboard.initialViewController(for: .login)
-//        }
-//
-//        window?.rootViewController = initialViewController
-//        window?.makeKeyAndVisible()
-//    }
 }
