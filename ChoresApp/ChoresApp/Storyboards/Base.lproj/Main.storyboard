@@ -106,6 +106,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Groups" id="5R0-Mj-636">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zuw-aV-e5X">
+                            <color key="tintColor" red="0.30196078430000001" green="0.73725490199999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="2q7-FX-Edl" kind="show" identifier="addGroup" id="PWp-KY-bfw"/>
                             </connections>

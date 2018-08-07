@@ -65,9 +65,6 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
         
         self.navTitle.title =  group?.groupsName
         
-        
-        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.767149806, green: 0.3626476526, blue: 1, alpha: 1)
-        
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         
         
