@@ -19,18 +19,42 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
         }
     }
     var displayedChores: [Chore] = []
+    var people = [People]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    var displayedPeople: [People] = []
+    
+    var choresCount = Int()
+    var peopleCount = Int()
+    
+    var choresIndex: Int = 0
+    var peopleIndex: Int = 0
     
     @IBOutlet weak var addChoresButton: UIButton!
     @IBOutlet weak var addPeopleButton: UIButton!
     @IBOutlet weak var randomizeButton: UIButton!
     @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var broomImg: UIImageView!
     
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         chores = CoreDataHelper.retrieveChores()
+        people = CoreDataHelper.retrievePerson()
+        
+        if chores.count == 0 {
+            broomImg.isHidden = false
+        } else {
+            broomImg.isHidden = true
+        }
+        
+        choresCount = chores.count
+        peopleCount = people.count
+        
         tableView.reloadData()
     }
     
@@ -54,8 +78,18 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
-        chores = CoreDataHelper.retrieveChores()
-        insertNewChore()
+        
+        if segue.identifier == "saveChore" {
+            chores = CoreDataHelper.retrieveChores()
+            choresIndex = choresIndex + 1
+            insertNewChore()
+        }
+        
+        if segue.identifier == "savePerson" {
+            people = CoreDataHelper.retrievePerson()
+            peopleIndex = peopleIndex + 1
+            insertNewPerson()
+        }
     }
     
     @IBAction func addChoresButtonTapped(_ sender: Any) {
@@ -74,20 +108,40 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+    func insertNewPerson() {
+        displayedPeople.append(people.last!)
+        
+        tableView.reloadData()
+        view.endEditing(true)
+    }
+    
 }
 
 extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chores.count
+        return chores.count + people.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChoreCell") as! ChoreCell
-        let newChore = chores[indexPath.row]
         
-        cell.choreTextLabel.text = newChore.choreItem
+       
+        
+        
+        if choresIndex == choresCount {
+            let newChore = chores[indexPath.row]
+            cell.choreTextLabel.text = newChore.choreItem
+        }
+        
+        if peopleIndex == peopleCount {
+            let newPerson = people[indexPath.row]
+            cell.choreTextLabel.text = newPerson.person
+        }
+        
+
+        
         
         cell.choreViewCell.layer.cornerRadius = 5.0
         cell.choreViewCell.layer.shadowColor = UIColor.lightGray.cgColor
@@ -95,7 +149,6 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
         cell.choreViewCell.layer.shadowOpacity = 0.6
         cell.choreViewCell.layer.shadowRadius = 5.0
         cell.choreViewCell.layer.shadowPath = UIBezierPath(rect: cell.choreViewCell.bounds).cgPath
-//        cell.choreViewCell.layer.shouldRasterize = true
         
         return cell
     }
@@ -108,12 +161,20 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
+//        if editingStyle == .delete {
+//            chores.remove(at: indexPath.row)
+//
+//            tableView.beginUpdates()
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
+//        }
+        
         if editingStyle == .delete {
-            chores.remove(at: indexPath.row)
+            let choreToDelete = chores[indexPath.row]
+            CoreDataHelper.delete(chore: choreToDelete)
             
-            tableView.beginUpdates()
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            chores = CoreDataHelper.retrieveChores()
         }
+        
     }
 
 }

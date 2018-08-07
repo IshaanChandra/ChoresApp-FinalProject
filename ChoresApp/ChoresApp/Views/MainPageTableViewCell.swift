@@ -13,5 +13,6 @@ import UIKit
     
     
     @IBOutlet weak var groupNameLabel: UILabel!
+    @IBOutlet weak var viewCell: UIView!
     
  }

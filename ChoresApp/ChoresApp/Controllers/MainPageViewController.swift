@@ -19,28 +19,51 @@ class MainPageViewController: UITableViewController {
         }
     }
     
+    var chores = [Chore]()
+    var people = [People]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.isEditing = false
         groups = CoreDataHelper.retrieveGroup()
+        chores = CoreDataHelper.retrieveChores()
+        people = CoreDataHelper.retrievePerson()
         
         //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(handleSignOutButtonTapped))
         
 
         
     }
-
-//    @objc func handleSignOutButtonTapped() {
-//        do {
-//            //CoreDataHelper.delete(person: People)
-//            try Auth.auth().signOut()
-//            let loginViewController = LoginViewController()
-//            let loginNavigationController = UINavigationController(rootViewController: loginViewController)
-//            self.present(loginNavigationController, animated: true, completion: nil)
-//        } catch let err {
-//            print("Failed to sign out with error", err)
-//        }
-//    }
+    
+    func deleteAllChores() {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let context = delegate.persistentContainer.viewContext
+        
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Chore")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        
+        do {
+            try context.execute(deleteRequest)
+            try context.save()
+        } catch {
+            print ("There was an error")
+        }
+    }
+    
+    func deleteAllPeople() {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let context = delegate.persistentContainer.viewContext
+        
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "People")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+        
+        do {
+            try context.execute(deleteRequest)
+            try context.save()
+        } catch {
+            print ("There was an error")
+        }
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return groups.count
@@ -51,17 +74,35 @@ class MainPageViewController: UITableViewController {
 
         let group = groups[indexPath.row]
         cell.groupNameLabel.text = group.groupsName
+        
+        cell.viewCell.layer.cornerRadius = 6.0
+        cell.viewCell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.viewCell.layer.shadowOffset = .zero
+        cell.viewCell.layer.shadowOpacity = 0.6
+        cell.viewCell.layer.shadowRadius = 5.0
+        cell.viewCell.layer.shadowPath = UIBezierPath(rect: cell.viewCell.bounds).cgPath
 
         return cell
     }
     
     //deletes note
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
             let groupToDelete = groups[indexPath.row]
             CoreDataHelper.delete(group: groupToDelete)
-            
             groups = CoreDataHelper.retrieveGroup()
+            
+        deleteAllPeople()
+        deleteAllChores()
+            
+//            let choreToDelete = chores[indexPath.row]
+//            CoreDataHelper.delete(chore: choreToDelete)
+//            chores = CoreDataHelper.retrieveChores()
+//
+//            let personToDelete = people[indexPath.row]
+//            CoreDataHelper.delete(person: personToDelete)
+//            people = CoreDataHelper.retrievePerson()
         }
     }
     
