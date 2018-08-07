@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 import CoreData
-import SafariServices
 
 class HomePageViewController: UIViewController, UITextFieldDelegate {
     
@@ -26,7 +25,6 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var randomizeButton: UIButton!
     @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
-    
     
     
     
@@ -51,6 +49,7 @@ class HomePageViewController: UIViewController, UITextFieldDelegate {
         self.navTitle.title =  group?.groupsName
         
         tableView.tableFooterView = UIView(frame: CGRect.zero)
+        
     
     }
     
@@ -85,10 +84,18 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChoreCell") as! ChoreCell
         let newChore = chores[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChoreCell") as! ChoreCell
         cell.choreTextLabel.text = newChore.choreItem
+        
+        cell.choreViewCell.layer.cornerRadius = 5.0
+        cell.choreViewCell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.choreViewCell.layer.shadowOffset = .zero
+        cell.choreViewCell.layer.shadowOpacity = 0.6
+        cell.choreViewCell.layer.shadowRadius = 5.0
+        cell.choreViewCell.layer.shadowPath = UIBezierPath(rect: cell.choreViewCell.bounds).cgPath
+//        cell.choreViewCell.layer.shouldRasterize = true
         
         return cell
     }
@@ -108,8 +115,6 @@ extension HomePageViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
-    
-    
-    
-    
+
 }
+

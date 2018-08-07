@@ -13,4 +13,7 @@ class ChoreCell: UITableViewCell {
 
     @IBOutlet weak var choreTextLabel: UILabel!
     
+    @IBOutlet weak var choreViewCell: UIView!
+    
+    
 }
