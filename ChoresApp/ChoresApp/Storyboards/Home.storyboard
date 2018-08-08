@@ -228,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="3498.4000000000001" y="-443.02848575712147"/>
         </scene>
-        <!--Randomized List View Controller-->
+        <!--Assigned Chores-->
         <scene sceneID="uYf-oe-edk">
             <objects>
                 <tableViewController id="c2O-x4-4Kj" customClass="RandomizedListViewController" customModule="ChoresApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -248,7 +248,7 @@
                                             <rect key="frame" x="9" y="9" width="357" height="61"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOH-1j-LVD">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOH-1j-LVD">
                                                     <rect key="frame" x="0.0" y="0.0" width="357" height="61"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -272,6 +272,9 @@
                             <outlet property="delegate" destination="c2O-x4-4Kj" id="ONE-R7-Y3w"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Assigned Chores" id="CLs-sE-5nA"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9M-2e-GE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

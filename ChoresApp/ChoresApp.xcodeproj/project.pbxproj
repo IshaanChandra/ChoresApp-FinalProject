@@ -527,15 +527,18 @@
 			baseConfigurationReference = B5DBD84483320921153BD532 /* Pods-ChoresApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H6U39W5TC8;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ashna Chandra (XPWFXE2BY7)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TJQ687K5LS;
 				INFOPLIST_FILE = ChoresApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.IshaanChandra.ChoresApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IshaanChandra.ChorifyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = ChorifyDevelopmentProfile;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -546,15 +549,18 @@
 			baseConfigurationReference = 5272B7F96DA8EEDE238D8705 /* Pods-ChoresApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H6U39W5TC8;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ashna Chandra (TJQ687K5LS)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TJQ687K5LS;
 				INFOPLIST_FILE = ChoresApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.IshaanChandra.ChoresApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IshaanChandra.ChorifyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = ChorifyDistributionProfile;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
