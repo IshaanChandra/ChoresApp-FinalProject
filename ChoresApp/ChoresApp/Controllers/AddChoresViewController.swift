@@ -21,6 +21,7 @@ class AddChoresViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
@@ -66,7 +67,4 @@ class AddChoresViewController: UIViewController {
             print("unexpected segue identifier")
         }
     }
-    
-    
-    
 }

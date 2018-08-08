@@ -20,6 +20,9 @@ class AddGroupNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         saveGroupName.layer.cornerRadius = 6
+        
+        self.hideKeyboardWhenTappedAround()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,5 +59,15 @@ class AddGroupNameViewController: UIViewController {
         }
     }
     
-    
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

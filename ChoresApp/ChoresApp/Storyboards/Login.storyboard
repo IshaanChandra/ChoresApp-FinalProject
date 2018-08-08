@@ -82,82 +82,6 @@
             </objects>
             <point key="canvasLocation" x="1551.2" y="133.5832083958021"/>
         </scene>
-        <!--Create Username View Controller-->
-        <scene sceneID="Myu-wW-2rA">
-            <objects>
-                <viewController id="5Tf-gm-vhM" customClass="CreateUsernameViewController" customModule="ChoresApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6iJ-RA-tT0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG2_8757" translatesAutoresizingMaskIntoConstraints="NO" id="Sma-uM-tVD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ge-OD-gsB">
-                                <rect key="frame" x="35" y="229" width="305" height="44"/>
-                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="0gC-cp-g0B"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBw-tJ-bLq">
-                                <rect key="frame" x="35" y="300" width="305" height="44"/>
-                                <color key="backgroundColor" red="0.3013898793" green="0.73540466319999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="N3Z-Iw-g20"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <action selector="nextButtonTapped:" destination="5Tf-gm-vhM" eventType="touchUpInside" id="NA4-iW-vcn"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="nz2-ci-1Vx">
-                                <rect key="frame" x="35" y="71" width="305" height="94"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eE4-Fh-SmY">
-                                        <rect key="frame" x="31.5" y="0.0" width="242" height="36"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a username so your friends can find you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am1-ix-aj3">
-                                        <rect key="frame" x="12.5" y="54" width="280" height="40"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="cBw-tJ-bLq" firstAttribute="leading" secondItem="6iJ-RA-tT0" secondAttribute="leading" constant="35" id="0XX-yW-BDJ"/>
-                            <constraint firstItem="0ge-OD-gsB" firstAttribute="trailing" secondItem="cBw-tJ-bLq" secondAttribute="trailing" id="6xX-mA-xCX"/>
-                            <constraint firstAttribute="trailing" secondItem="cBw-tJ-bLq" secondAttribute="trailing" constant="35" id="7z2-k6-T4I"/>
-                            <constraint firstItem="0ge-OD-gsB" firstAttribute="top" secondItem="nz2-ci-1Vx" secondAttribute="bottom" constant="64" id="9lP-fT-oAO"/>
-                            <constraint firstItem="cBw-tJ-bLq" firstAttribute="top" secondItem="0ge-OD-gsB" secondAttribute="bottom" constant="27" id="CgI-Ih-W8H"/>
-                            <constraint firstItem="nz2-ci-1Vx" firstAttribute="top" secondItem="lWL-iD-DYM" secondAttribute="top" constant="51" id="GUs-pm-Vpu"/>
-                            <constraint firstItem="0ge-OD-gsB" firstAttribute="leading" secondItem="cBw-tJ-bLq" secondAttribute="leading" id="NhL-bh-Mct"/>
-                            <constraint firstItem="nz2-ci-1Vx" firstAttribute="leading" secondItem="lWL-iD-DYM" secondAttribute="leading" constant="35" id="cGM-UJ-F6Z"/>
-                            <constraint firstItem="lWL-iD-DYM" firstAttribute="trailing" secondItem="nz2-ci-1Vx" secondAttribute="trailing" constant="35" id="ohk-3k-Yz1"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="lWL-iD-DYM"/>
-                    </view>
-                    <connections>
-                        <outlet property="nextButton" destination="cBw-tJ-bLq" id="gM5-nm-G7z"/>
-                        <outlet property="usernameTextField" destination="0ge-OD-gsB" id="0DI-6R-1HP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2mt-sC-oer" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2265" y="976"/>
-        </scene>
         <!--Main-->
         <scene sceneID="J5r-HJ-Yl1">
             <objects>
@@ -187,6 +111,5 @@
     </scenes>
     <resources>
         <image name="BigBroom" width="1046" height="1088"/>
-        <image name="IMG2_8757" width="1363" height="1365"/>
     </resources>
 </document>

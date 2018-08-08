@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,22 +76,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="khP-Ub-iLl">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khP-Ub-iLl">
                                             <rect key="frame" x="16" y="14" width="343" height="61"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njp-r2-VRq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njp-r2-VRq">
                                                     <rect key="frame" x="8" y="0.0" width="335" height="61"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.9137254901960784" green="0.90588235294117647" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstItem="Njp-r2-VRq" firstAttribute="top" secondItem="khP-Ub-iLl" secondAttribute="top" id="SAY-C6-rGS"/>
+                                                <constraint firstItem="Njp-r2-VRq" firstAttribute="leading" secondItem="khP-Ub-iLl" secondAttribute="leadingMargin" id="Y3R-i8-Eqt"/>
+                                                <constraint firstAttribute="bottom" secondItem="Njp-r2-VRq" secondAttribute="bottom" id="hCr-Rl-bkz"/>
+                                                <constraint firstAttribute="trailing" secondItem="Njp-r2-VRq" secondAttribute="trailing" id="yzv-ZA-fZj"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstItem="khP-Ub-iLl" firstAttribute="top" secondItem="Nxx-DB-cVI" secondAttribute="topMargin" constant="3" id="9FZ-fD-nlh"/>
+                                        <constraint firstItem="khP-Ub-iLl" firstAttribute="trailing" secondItem="Nxx-DB-cVI" secondAttribute="trailingMargin" id="QkH-fL-nHz"/>
+                                        <constraint firstItem="khP-Ub-iLl" firstAttribute="leading" secondItem="Nxx-DB-cVI" secondAttribute="leadingMargin" id="chY-4m-bHj"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="khP-Ub-iLl" secondAttribute="bottom" constant="4" id="pIP-qF-dLE"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="groupNameLabel" destination="Njp-r2-VRq" id="IEE-xG-m3D"/>
